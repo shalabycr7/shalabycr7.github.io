@@ -93,20 +93,7 @@ function bot() {
   }
 }
 function allTap() {
-  Tap("all", "allP");
-  var hp1 = document.getElementById("callsP");
-  hp1.style.border = "none";
-  var hp2 = document.getElementById("friendsP");
-  hp2.style.border = "none";
-  prof();
-  j();
-  var a = document.getElementById("allCont");
-
-      if (page == null) {
-    //alert('hh');
-  } else {
-    a.innerHTML = page;
-  }
+  indexLoad();
 }
 function callsTap() {
   Tap("callsCont", "callsP");
