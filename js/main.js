@@ -1,5 +1,5 @@
-
 var per = ["Alex Green", "Sarah Micheal", "Sydney Padilha", "Katty Alexon"];
+
 function rldChatNames() {
   var c = document.getElementsByClassName("perName");
   c[0].innerHTML = per[0];
@@ -7,6 +7,7 @@ function rldChatNames() {
   c[2].innerHTML = per[2];
   c[3].innerHTML = per[3];
 }
+
 function j() {
   var k = document.getElementsByClassName("perName");
   var picsMain = document.getElementsByClassName("pImg");
@@ -15,7 +16,7 @@ function j() {
     k[i].addEventListener("click", clickChat1);
     k[i].setAttribute("name", k[i].innerHTML);
     k[i].setAttribute("dataIndex", i);
-    k[i].addEventListener("click", function () {
+    k[i].addEventListener("click", function() {
       var index = this.getAttribute("name");
       var dtIndex = this.getAttribute("dataIndex");
       localStorage.setItem("names", index);
@@ -25,6 +26,7 @@ function j() {
 }
 var io = localStorage.getItem("dtI");
 var lop = localStorage.getItem("names");
+
 function prof() {
   var k = document.getElementsByClassName("pImg");
   var b = document.getElementById("showImg");
@@ -32,7 +34,7 @@ function prof() {
     // alert(k[i].innerHTML);
     k[i].addEventListener("click", on);
     k[i].setAttribute("data-index", i);
-    k[i].addEventListener("click", function () {
+    k[i].addEventListener("click", function() {
       if (this.getAttribute("data-index") == 0) {
         b.src = k[0].src;
       } else if (this.getAttribute("data-index") == 1) {
@@ -68,9 +70,11 @@ function indexLoad() {
   prof();
   j();
 }
+
 function clickChat1() {
   location.href = "./chat.html";
 }
+
 function sendText() {
   var textB = document.getElementById("textBox");
   if (textB.value == "") {
@@ -80,11 +84,11 @@ function sendText() {
     bot();
   }
 }
+
 function bot() {
   var se = document.getElementsByClassName("recP");
   var recLast = se[se.length - 1];
-  if (recLast == null) {
-  } else {
+  if (recLast == null) {} else {
     if (recLast.innerHTML.includes("hi")) {
       creat_sender("nice to meet you");
       creat_sender("nice ou");
@@ -92,9 +96,11 @@ function bot() {
     }
   }
 }
+
 function allTap() {
   indexLoad();
 }
+
 function callsTap() {
   Tap("callsCont", "callsP");
   var hp1 = document.getElementById("allP");
@@ -105,6 +111,7 @@ function callsTap() {
   j();
   prof();
 }
+
 function frndTap() {
   Tap("friendsCont", "friendsP");
   var hp1 = document.getElementById("callsP");
@@ -115,6 +122,7 @@ function frndTap() {
   j();
   prof();
 }
+
 function Tap(secId, tabN) {
   var tapName = document.getElementById(secId);
   var actSec = document.getElementById("allCont");
@@ -122,10 +130,10 @@ function Tap(secId, tabN) {
   var hp = document.getElementById(tabN);
   hp.style.borderBottom = "2px solid #465EF6";
 }
+
 function add() {
   var name = prompt("Contact Name");
-  if (name == "" || name == null) {
-  } else {
+  if (name == "" || name == null) {} else {
     var oldDiv = document.getElementById("allCont");
     var newName = document.createElement("h3");
     newName.className = "perName";
@@ -141,7 +149,7 @@ function add() {
     newDiv.className = "contact";
     newName.innerHTML = name;
     newDiv.appendChild(newName);
-    newName.addEventListener('click',clickChat1);
+    newName.addEventListener('click', clickChat1);
     sec.appendChild(newDiv);
     oldDiv.appendChild(sec);
     newDiv.scrollIntoView();
@@ -151,7 +159,7 @@ function add() {
     );
     /*  per.push(newName);
     alert(per[per.length-1].innerHTML);*/
-    
+
   }
 }
 
@@ -161,6 +169,7 @@ function chatPageLoad() {
   mName.innerHTML = lop;
   chatPicChange();
 }
+
 function chatPicChange() {
   var chatp = document.getElementById("chatProfile");
   if (io == 0) {
@@ -175,6 +184,7 @@ function chatPicChange() {
     chatp.src = "pics/EmptyProf.jpg";
   }
 }
+
 function creat_sender(text) {
   var textArea = document.getElementById("chatArea");
   var newSend = document.createElement("div");
@@ -219,7 +229,7 @@ function creat_reciver(text) {
   textArea.appendChild(newTimeDiv);
   textB.value = "";
   getTime("timeRec");
-  newRec.addEventListener("mousemove", function () {
+  newRec.addEventListener("mousemove", function() {
     alert("gg");
   });
   var c = document.getElementsByClassName("recP");
@@ -231,8 +241,7 @@ function creat_reciver(text) {
   } else {
     newRec.style.height = eval("ln/33*20") + "px";
   }
-  if (recLast == null) {
-  } else {
+  if (recLast == null) {} else {
     recLast.scrollIntoView();
   }
 }
@@ -240,6 +249,7 @@ function creat_reciver(text) {
 function on() {
   document.getElementById("overlay").style.display = "block";
 }
+
 function off() {
   document.getElementById("overlay").style.display = "none";
 }
