@@ -1,4 +1,4 @@
-var page = localStorage.getItem("page");
+
 var per = ["Alex Green", "Sarah Micheal", "Sydney Padilha", "Katty Alexon"];
 function rldChatNames() {
   var c = document.getElementsByClassName("perName");
@@ -99,8 +99,8 @@ function allTap() {
   var hp2 = document.getElementById("friendsP");
   hp2.style.border = "none";
   var a = document.getElementById("allCont");
-  j();
   prof();
+  j();
   if (page == null) {
     //alert('hh');
   } else {
@@ -257,7 +257,7 @@ function off() {
 }
 
 var ss = localStorage.getItem("y");
-
+var page = localStorage.getItem("page");
 
 function getTime(classN) {
   var date = new Date();
