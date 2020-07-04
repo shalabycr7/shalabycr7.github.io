@@ -1,259 +1,236 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body{
+body {
   font-family: Arial, Helvetica, sans-serif;
 }
-#mainHeader{
+#mainHeader {
   width: 100%;
   height: 100px;
-  background-color: #465EF6;
-  border:1px solid #465EF6;
+  background-color: #465ef6;
+  border: 1px solid #465ef6;
   position: static;
   top: 0px;
 }
-#mainHeader h1{
+#mainHeader h1 {
   margin: 40px 0 0 20px;
   color: white;
   font-size: 30px;
   font-family: monospace;
 }
 
-#panel{
+#panel {
   width: 100%;
   height: 150px;
-/*  border: 1px solid green;*/
-background-color: white;
-border-radius:24px;
-position: absolute;
-top: 86px;
-z-index: 3;
+  background-color: white;
+  border-radius: 24px;
+  position: absolute;
+  top: 86px;
+  z-index: 3;
 }
-#panel h3{
+#panel h3 {
   display: inline-block;
   margin-top: 12px;
-  margin-left:15px;
-  padding:0 10px;
-  color: #465EF6;
+  margin-left: 15px;
+  padding: 0 10px;
+  color: #465ef6;
   font-family: Arial, Helvetica, sans-serif;
 }
-.cont{
+.cont {
   width: 70px;
   height: 70px;
-  border: 1px dotted #465EF6;
-  border-radius:35px;
-/*  margin-top: 15px; 
-  margin-bottom:5px;*/
-  margin-left:25px;
+  border: 1px dotted #465ef6;
+  border-radius: 35px;
+  margin-left: 25px;
   display: inline-block;
   overflow: hidden;
- 
 }
-#status{
-  /*border: 1px solid yellow;*/
+#status {
   width: 100%;
   height: 85px;
   white-space: nowrap;
-  overflow-x: auto; overflow-y: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
   margin-top: 17px;
 }
-#status img{
+#status img {
   width: 70px;
   height: 70px;
-  
 }
-#contactsPanal{
+#contactsPanal {
   width: 100%;
   height: 90%;
-/*  border: 1px solid red;*/
   position: absolute;
-  top:220px;
+  top: 220px;
   z-index: 2;
-  background-color:#F0F0F0;
+  background-color: #f0f0f0;
   overflow: scroll;
 }
-.contact{
+.contact {
   height: 80px;
   width: 90%;
- /* border: 1px solid blue;*/
+  /* border: 1px solid blue;*/
   display: flex;
   margin: 20px 0 10px 10px;
   overflow: auto;
-  border-left: 4px solid #DADFE3;
-  border-radius:8px;
+  border-left: 4px solid #dadfe3;
+  border-radius: 8px;
   translate: background-color 1s;
 }
-.contact:active{
-  background-color:rgba(218, 223, 227,0.4);
+.contact:active {
+  background-color: rgba(218, 223, 227, 0.4);
 }
-.perName{
+.perName {
   margin: 27px 0 10px 20px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   cursor: pointer;
-  
 }
-.contact img{
+.contact img {
   width: 70px;
   height: 70px;
 }
-.profilePic{
+.profilePic {
   width: 70px;
   height: 70px;
- /* border: 1px solid red;*/
-  border-radius:35px;
+  border-radius: 35px;
   margin: 5px 0 0 10px;
   overflow: hidden;
 }
-#chatHeader{
+#chatHeader {
   position: static;
   width: 100%;
-  height:80px;
- /* border: 1px solid red;*/
+  height: 80px;
   display: flex;
-  background-color:white;
+  background-color: white;
   justify-content: space-between;
-  border-bottom: 3px solid #DADFE3;
-  border-radius:9px;
+  border-radius: 9px;
 }
-#chatHeader img{
+#chatHeader img {
   width: 50px;
   height: 50px;
-  border-radius:25px;
+  border-radius: 25px;
 }
-#chatHeader h3{
+#chatHeader h3 {
   margin-top: 20px;
-  margin-right:5px;
-  color: #465EF6;
+  margin-right: 5px;
+  color: #465ef6;
   font-size: 20px;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
   cursor: pointer;
 }
-#msgName{
+#msgName {
   color: red;
 }
-#chatHeader img{
+#chatHeader img {
   margin-top: 10px;
-  margin-right:5px;
+  margin-right: 5px;
 }
-#chatHeader h4{
+#chatHeader h4 {
   position: absolute;
   top: 60px;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #818382;
 }
-#chatArea{
+#chatArea {
   width: 100%;
   height: 620px;
   overflow: scroll;
- /*border: 1px solid green;*/
- 
 }
-#chatFt{
+#chatFt {
   width: 100%;
   height: 130px;
   position: static;
   bottom: 0;
   display: flex;
   justify-content: space-around;
- /* border: 1px solid red;*/
-  box-shadow: -4px -8px 20px rgba(0, 0, 0,0.1);
+  box-shadow: -4px -8px 20px rgba(0, 0, 0, 0.1);
 }
-#chatFt #textBox{
+#chatFt #textBox {
   width: 59%;
   height: 45px;
-  margin:20px 0 0 20px;
-
-  border-radius:10px;
+  margin: 20px 0 0 20px;
+  border: none;
+  border-radius: 10px;
   text-indent: 1px;
   outline: none;
   font-size: 17px;
   overflow: auto;
   padding: 5px 10px;
-    transition: width 1s;
- /* white-space: pre-line;*/
+  transition: width 1s;
 }
-#chatFt #textBox:hover{
+#chatFt #textBox:hover {
   width: 65%;
-    border: 1px dotted #465EF6;
+  border: 1px dotted #465ef6;
 }
-#chatFt #send{
-  
+#chatFt #send {
   height: 60px;
   width: 60px;
   border: none;
   outline: none;
-  border-radius:30px;
+  border-radius: 30px;
   margin-top: 14px;
-    transition: background-color 0.3s;
-   
+  transition: background-color 0.3s;
+  cursor: pointer;
 }
-#chatFt button:active{
-  background-color:#465EF6;
+#chatFt button:active {
+  background-color: #465ef6;
   color: white;
 }
-#add{
+#add {
   width: 40px;
   height: 40px;
   outline: none;
-  border-radius:20px;
+  border-radius: 20px;
   z-index: 9;
   position: absolute;
   top: 30px;
-  left:85%;
+  left: 85%;
   transition: background-color 0.3s;
-  background: url('../pics/add.png');
-  background-size:contain;
+  background: url("../pics/add.png");
+  background-size: contain;
 }
-#sender{
+#sender {
   width: 65%;
-  height: 30px;
-  /*border: 1px solid red;*/
-  border-radius:20px;
-  margin: 5px 10px;
-   background-color: #465EF6;
-   color: white;
-white-space: pre-line;
- overflow: hidden;
-  font-size: 18px;
-  text-indent: 9px;
-  padding: 2px 4px 2px 9px;
-  float: left;
-  word-wrap: break-word;
-  
-}
-#reciver{
-  width: 65%;
-  height: 30px;
-  /*border: 1px solid red;*/
-  border-radius:20px;
-  margin: 5px 10px;
-  background-color: #F0F0F0;
-  color: black;
+  height: auto;
+  border-radius: 20px;
+  margin: 10px 10px;
+  background-color: #465ef6;
+  color: white;
+  overflow: hidden;
 
- overflow: hidden;
-  font-size: 18px;
+  float: left;
+}
+#reciver {
+  width: 65%;
+  height: auto;
+  border: 1px solid rgb(20, 216, 29);
+  border-radius: 20px;
+  margin: 10px 10px;
+  background-color: #f0f0f0;
+  color: black;
+  overflow: auto;
   float: right;
+}
+#reciver p,
+#sender p {
+  line-height: 20px;
+  margin: 1px 10px;
   word-wrap: break-word;
   white-space: pre-line;
+  text-indent: 1px;
 }
-#reciver p{
- /*border: 1px solid red;*/
- padding: 0px 1px 0px 1px;
- margin: 0px 5px;
-  
-}
-#friendsCont{
-  display: none;
-  
-}
-#callsCont{
+#friendsCont {
   display: none;
 }
-#all{
+#callsCont {
+  display: none;
+}
+#all {
   display: none;
 }
 #overlay {
@@ -280,74 +257,62 @@ white-space: pre-line;
   width: 100%;
   height: 30%;
   overflow: hidden;
-
 }
-#show img{
+#show img {
   height: 150px;
   width: 150px;
   border-radius: 75px;
- margin-left: 50%;
- transform: translate(-50%);
- 
+  margin-left: 50%;
+  transform: translate(-50%);
 }
-.dwnBar{
+.dwnBar {
   height: 50px;
   width: 100%;
-  background: 
-  rgba(237.78481012658227, 236.9372105366434, 236.9372105366434, 1);
+  background: rgba(237.78481012658227, 236.9372105366434, 236.9372105366434, 1);
   display: flex;
   border-radius: 15px;
   justify-content: space-around;
-  
 }
-.dwnBar i{
+.dwnBar i {
   font-size: 30px;
-  color: #465EF6;
+  color: #465ef6;
   padding: 21px 20px 2px 20px;
-  
 }
-.dwnBar i:hover{
-  border-bottom: 4px solid  #465EF6;
-  background-color:#DADFE3;
+.dwnBar i:hover {
+  border-bottom: 4px solid #465ef6;
+  background-color: #dadfe3;
 }
-#show img:hover{
+#show img:hover {
   border: 1px solid white;
 }
-#chatHeader #msgName{
+#chatHeader #msgName {
   position: absolute;
   top: 10px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.timeRec{
+.timeRec {
   height: 22px;
-  width: 65px;
-
+  width: 73px;
   float: right;
-  margin: 5px 10px;
-  word-wrap: break-word;
-  white-space: pre-line;
-  border-radius:15px;
- padding-left: 2px;
-  padding-right: 0px;
+  margin: 8px 10px;
+  border-radius: 15px;
+  padding-left: 7px;
   padding-top: 2px;
-  background-color:#F0F0F0;
-  
-  
+  background-color: #f0f0f0;
 }
 
-.timeSent{
+.timeSent {
   height: 22px;
-  width: 65px;
-  
+  width: 73px;
   float: left;
-  margin: 5px 10px;
-  border-radius:15px;
-  padding-left: 2px;
-  padding-right: 0px;
+  margin: 8px 10px;
+  border-radius: 15px;
+  padding-left: 7px;
   padding-top: 2px;
-  background-color:#465EF6;
+  background-color: #465ef6;
   color: white;
-  word-wrap: break-word;
-  white-space: pre-line;
+}
+.Tap {
+  cursor: pointer;
 }
