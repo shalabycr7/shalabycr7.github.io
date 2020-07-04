@@ -98,10 +98,11 @@ function allTap() {
   hp1.style.border = "none";
   var hp2 = document.getElementById("friendsP");
   hp2.style.border = "none";
-  var a = document.getElementById("allCont");
   prof();
   j();
-  if (page == null) {
+  var a = document.getElementById("allCont");
+
+      if (page == null) {
     //alert('hh');
   } else {
     a.innerHTML = page;
