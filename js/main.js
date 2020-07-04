@@ -1,3 +1,4 @@
+var page = localStorage.getItem("page");
 var per = ["Alex Green", "Sarah Micheal", "Sydney Padilha", "Katty Alexon"];
 function rldChatNames() {
   var c = document.getElementsByClassName("perName");
@@ -152,6 +153,7 @@ function add() {
     newDiv.className = "contact";
     newName.innerHTML = name;
     newDiv.appendChild(newName);
+    newName.addEventListener('click',clickChat1);
     sec.appendChild(newDiv);
     oldDiv.appendChild(sec);
     newDiv.scrollIntoView();
@@ -161,6 +163,7 @@ function add() {
     );
     /*  per.push(newName);
     alert(per[per.length-1].innerHTML);*/
+    
   }
 }
 
@@ -254,7 +257,7 @@ function off() {
 }
 
 var ss = localStorage.getItem("y");
-var page = localStorage.getItem("page");
+
 
 function getTime(classN) {
   var date = new Date();
