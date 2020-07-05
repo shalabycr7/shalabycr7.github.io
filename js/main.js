@@ -196,10 +196,15 @@ function creat_sender(text) {
   newSend.appendChild(newText);
   textArea.appendChild(newSend);
   var newTimeDiv = document.createElement("div");
+  var timeSs =document.createElement('p');
+
+  timeSs.className='tms';
+  newTimeDiv.appendChild(timeSs);
+  
   newTimeDiv.className = "timeSent";
   textArea.appendChild(newTimeDiv);
   var c = document.getElementsByClassName("senderP");
-  getTime("timeSent");
+  getTime("tms");
   var ln = c[c.length - 1].innerHTML.length;
   var sendLast = c[c.length - 1];
   if (ln < 33) {
@@ -225,10 +230,13 @@ function creat_reciver(text) {
   newRec.appendChild(newText);
   textArea.appendChild(newRec);
   var newTimeDiv = document.createElement("div");
+  var timeS =document.createElement('p');
   newTimeDiv.className = "timeRec";
+  timeS.className='tm';
+  newTimeDiv.appendChild(timeS);
   textArea.appendChild(newTimeDiv);
   textB.value = "";
-  getTime("timeRec");
+  getTime("tm");
   newRec.addEventListener("mousemove", function() {
     alert("gg");
   });
