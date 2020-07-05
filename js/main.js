@@ -149,11 +149,13 @@ function add() {
     newDiv.className = "contact";
     newName.innerHTML = name;
     newDiv.appendChild(newName);
-    newName.addEventListener('click', clickChat1);
+    // newName.addEventListener('click', clickChat1);
     sec.appendChild(newDiv);
     oldDiv.appendChild(sec);
     newDiv.scrollIntoView();
     localStorage.setItem("page", oldDiv.innerHTML);
+    j();
+    prof();
     console.log(
       "pls reload the page to interact with the new contact you added"
     );
