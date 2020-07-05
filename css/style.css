@@ -87,6 +87,7 @@ body {
   border-left: 4px solid #dadfe3;
   border-radius: 8px;
   translate: background-color 1s;
+  border: 1px solid red;
 }
 
 .contact:active {
