@@ -286,10 +286,3 @@ function getTime(classN) {
   var tLast = t[t.length - 1];
   tLast.innerHTML = hours + ":" + minutes + " " + newformat;
 }
-function chButton() {
- clickChat1();
-}
- /*var nn=document.getElementsByClassName('contact');
-nn[0].addEventListener('click',function(){
-  alert('hh');
-})*/
