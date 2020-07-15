@@ -16,7 +16,7 @@ function j() {
     k[i].addEventListener("click", clickChat1);
     k[i].setAttribute("name", k[i].innerHTML);
     k[i].setAttribute("dataIndex", i);
-    k[i].addEventListener("click", function() {
+    k[i].addEventListener("click", function () {
       var index = this.getAttribute("name");
       var dtIndex = this.getAttribute("dataIndex");
       localStorage.setItem("names", index);
@@ -34,7 +34,7 @@ function prof() {
     // alert(k[i].innerHTML);
     k[i].addEventListener("click", on);
     k[i].setAttribute("data-index", i);
-    k[i].addEventListener("click", function() {
+    k[i].addEventListener("click", function () {
       if (this.getAttribute("data-index") == 0) {
         b.src = k[0].src;
       } else if (this.getAttribute("data-index") == 1) {
@@ -88,7 +88,8 @@ function sendText() {
 function bot() {
   var se = document.getElementsByClassName("recP");
   var recLast = se[se.length - 1];
-  if (recLast == null) {} else {
+  if (recLast == null) {
+  } else {
     if (recLast.innerHTML.includes("hi")) {
       creat_sender("nice to meet you");
       creat_sender("nice ou");
@@ -133,7 +134,8 @@ function Tap(secId, tabN) {
 
 function add() {
   var name = prompt("Contact Name");
-  if (name == "" || name == null) {} else {
+  if (name == "" || name == null) {
+  } else {
     var oldDiv = document.getElementById("allCont");
     var newName = document.createElement("h3");
     newName.className = "perName";
@@ -161,7 +163,6 @@ function add() {
     );
     /*  per.push(newName);
     alert(per[per.length-1].innerHTML);*/
-
   }
 }
 
@@ -198,11 +199,11 @@ function creat_sender(text) {
   newSend.appendChild(newText);
   textArea.appendChild(newSend);
   var newTimeDiv = document.createElement("div");
-  var timeSs =document.createElement('p');
+  var timeSs = document.createElement("p");
 
-  timeSs.className='tms';
+  timeSs.className = "tms";
   newTimeDiv.appendChild(timeSs);
-  
+
   newTimeDiv.className = "timeSent";
   textArea.appendChild(newTimeDiv);
   var c = document.getElementsByClassName("senderP");
@@ -232,14 +233,14 @@ function creat_reciver(text) {
   newRec.appendChild(newText);
   textArea.appendChild(newRec);
   var newTimeDiv = document.createElement("div");
-  var timeS =document.createElement('p');
+  var timeS = document.createElement("p");
   newTimeDiv.className = "timeRec";
-  timeS.className='tm';
+  timeS.className = "tm";
   newTimeDiv.appendChild(timeS);
   textArea.appendChild(newTimeDiv);
   textB.value = "";
   getTime("tm");
-  newRec.addEventListener("mousemove", function() {
+  newRec.addEventListener("mousemove", function () {
     alert("gg");
   });
   var c = document.getElementsByClassName("recP");
@@ -251,7 +252,8 @@ function creat_reciver(text) {
   } else {
     newRec.style.height = eval("ln/33*20") + "px";
   }
-  if (recLast == null) {} else {
+  if (recLast == null) {
+  } else {
     recLast.scrollIntoView();
   }
 }
