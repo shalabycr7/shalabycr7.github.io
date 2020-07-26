@@ -12,7 +12,7 @@ body {
   color: white;
   font-size: 30px;
   position: absolute;
-  top: 40px;
+  top: 45px;
   left: 20px;
 }
 
@@ -27,7 +27,7 @@ body {
 }
 
 #mainHeader h1 {
-  margin: 40px 0 0 80px;
+  margin: 45px 0 0 80px;
   color: white;
   font-size: 30px;
   font-family: monospace;
@@ -217,17 +217,16 @@ body {
 }
 
 #add {
-  width: 40px;
-  height: 40px;
+  width: 33px;
+  height: 30px;
   outline: none;
-  border-radius: 20px;
   z-index: 9;
   position: absolute;
-  top: 30px;
-  left: 89%;
-  transition: background-color 0.3s;
-  background: url("../pics/add.png");
-  background-size: contain;
+  top: 43px;
+  right: 15px;
+  /*background: url("../pics/add.png");
+  background-size: contain;*/
+  filter: invert(100%);
 }
 
 #sender {
@@ -238,7 +237,6 @@ body {
   background-color: #465ef6;
   color: white;
   overflow: hidden;
-
   float: left;
 }
 
