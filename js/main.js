@@ -288,7 +288,3 @@ function getTime(classN) {
   var tLast = t[t.length - 1];
   tLast.innerHTML = hours + ":" + minutes + " " + newformat;
 }
-
-function profilePage() {
-  location.href='./profilePage.html';
-}

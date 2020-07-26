@@ -19,7 +19,8 @@ left: 20px;
 #mainHeader {
 width: 100%;
 height: 100px;
-background-color: #465ef6;
+background-image:linear-gradient(to left, #1488CC, #2B32B2);
+
 border: 1px solid #465ef6;
 position: static;
 top: 0px;
@@ -399,8 +400,6 @@ z-index: 4;
 #profEditPic{
 width: 100%;
 height: 120px;
-
-
 position: relative;
 border-radius:20px;
 }
@@ -418,7 +417,7 @@ border-radius:50%;
 #profDetails{
 width: 90%;
 height: 330px;
-border-bottom: 3px dotted #465ef6;
+border-bottom: 3px solid #465ef6;
 margin-top: 5px;
 position: absolute;
 left:50%;
@@ -426,7 +425,7 @@ transform: translate(-50%);
 }
 #profDetails input{
 padding: 10px;
-width: 70%;
+width: 5%;
 margin-bottom:20px;
 margin-top: 2px;
 border: none;
@@ -440,11 +439,21 @@ color: #465ef6;
 #profDetails label{
 color: #465ef6;
 font-size: 19px;
-
-
 font-family: 'Raleway', sans-serif;
 }
 #profDetails input:hover{
 width: 100%;
 border-bottom:4px solid #465ef6;
+}
+#closeProf{
+  outline: none;
+  border: none;
+  width: 70px;
+  height: 35px;
+  background-color:#465ef6;
+  color: white;
+  font-size:19px;
+  margin-left:50%;
+  transform: translate(-50%);
+  margin-top: 10px;
 }
