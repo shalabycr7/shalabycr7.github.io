@@ -12,7 +12,7 @@
     
 </head>
 
-<body>
+<body onload="profPageLoad()">
   <header id="profHeader">
     
   </header>
@@ -21,6 +21,8 @@
      <i class="far fa-user-circle"></i>
     </div>
  <div id="profDetails">
+   <form id="profForm" action="" method="get" accept-charset="utf-8">
+    
       <label for="profName">Name</label>
       <br />
     <input type="text" name="profName" id="profName" />
@@ -33,7 +35,8 @@
     <br />
     <input type="number" name="profPhone" id="profPhone"/>
     <br />
-    <button id="closeProf" onclick="location.href='contacts.html'">Close</button>
+       </form>
+    <button id="closeProf">Close</button>
   </div>
     
   </div>
