@@ -186,18 +186,19 @@ body {
   height: 45px;
   margin: 20px 0 0 20px;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   text-indent: 1px;
   outline: none;
   font-size: 17px;
   overflow: auto;
   padding: 5px 10px;
+  border-bottom:3px solid #465ef6;
   transition: width 1s;
 }
 
 #chatFt #textBox:hover {
   width: 65%;
-  border: 1px dotted #465ef6;
+ 
 }
 
 /*#chatFt #send {
@@ -215,7 +216,7 @@ body {
 .fa-reply{
   font-size: 35px;
   color: #465ef6;
-  margin-top: 26px;
+  margin-top: 37px;
  
 }
 
