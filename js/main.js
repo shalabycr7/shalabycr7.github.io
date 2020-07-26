@@ -294,14 +294,13 @@ function profPageLoad() {
     var email = f['profEmail'].value;
     var phone = f['profPhone'].value;
     if (name==''||email==''||phone=='') {
-      alert('gg')
+    
     } else {
       localStorage.setItem('nn', name);
     localStorage.setItem('ee', email);
     localStorage.setItem('pp', phone);
     location.href = './contacts.html';
     }
-    
   })
   f[0].value = pName;
   f[1].value = pEmail;
