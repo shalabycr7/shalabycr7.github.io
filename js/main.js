@@ -46,7 +46,7 @@ function prof() {
       } else if (this.getAttribute("data-index") == 4) {
         b.src = k[4].src;
       } else {
-        b.src = "pics/EmptyProf.jpg";
+        b.src = "pics/EmptyProf.svg";
       }
     });
   }
@@ -142,7 +142,7 @@ function add() {
     var newPicDiv = document.createElement("div");
     var newPPic = document.createElement("img");
     newPPic.className = "pImg";
-    newPPic.src = "pics/EmptyProf.jpg";
+    newPPic.src = "pics/EmptyProf.svg";
     newPicDiv.appendChild(newPPic);
     newPicDiv.className = "profilePic";
     newDiv.appendChild(newPicDiv);
@@ -182,7 +182,7 @@ function chatPicChange() {
   } else if (io == 3) {
     chatp.src = "pics/4.jpg";
   } else {
-    chatp.src = "pics/EmptyProf.jpg";
+    chatp.src = "pics/EmptyProf.svg";
   }
 }
 
