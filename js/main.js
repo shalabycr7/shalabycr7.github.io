@@ -16,7 +16,7 @@ function j() {
     k[i].addEventListener("click", clickChat1);
     k[i].setAttribute("name", k[i].innerHTML);
     k[i].setAttribute("dataIndex", i);
-    k[i].addEventListener("click", function () {
+    k[i].addEventListener("click", function() {
       var index = this.getAttribute("name");
       var dtIndex = this.getAttribute("dataIndex");
       localStorage.setItem("names", index);
@@ -34,7 +34,7 @@ function prof() {
     // alert(k[i].innerHTML);
     k[i].addEventListener("click", on);
     k[i].setAttribute("data-index", i);
-    k[i].addEventListener("click", function () {
+    k[i].addEventListener("click", function() {
       if (this.getAttribute("data-index") == 0) {
         b.src = k[0].src;
       } else if (this.getAttribute("data-index") == 1) {
@@ -88,8 +88,7 @@ function sendText() {
 function bot() {
   var se = document.getElementsByClassName("recP");
   var recLast = se[se.length - 1];
-  if (recLast == null) {
-  } else {
+  if (recLast == null) {} else {
     if (recLast.innerHTML.includes("hi")) {
       creat_sender("nice to meet you");
       creat_sender("nice ou");
@@ -134,8 +133,7 @@ function Tap(secId, tabN) {
 
 function add() {
   var name = prompt("Contact Name");
-  if (name == "" || name == null) {
-  } else {
+  if (name == "" || name == null) {} else {
     var oldDiv = document.getElementById("allCont");
     var newName = document.createElement("h3");
     newName.className = "perName";
@@ -240,7 +238,7 @@ function creat_reciver(text) {
   textArea.appendChild(newTimeDiv);
   textB.value = "";
   getTime("tm");
-  newRec.addEventListener("mousemove", function () {
+  newRec.addEventListener("mousemove", function() {
     alert("gg");
   });
   var c = document.getElementsByClassName("recP");
@@ -252,8 +250,7 @@ function creat_reciver(text) {
   } else {
     newRec.style.height = eval("ln/33*20") + "px";
   }
-  if (recLast == null) {
-  } else {
+  if (recLast == null) {} else {
     recLast.scrollIntoView();
   }
 }
@@ -288,22 +285,23 @@ function getTime(classN) {
   var tLast = t[t.length - 1];
   tLast.innerHTML = hours + ":" + minutes + " " + newformat;
 }
-function profPageLoad (){
-var profCloseBu =document.getElementById('closeProf');
-var f =document.getElementById('profForm');
-profCloseBu.addEventListener('click', function(){
-  var name =f['profName'].value;
-  var email =f['profEmail'].value;
-  var phone =f['profPhone'].value;
-  localStorage.setItem('nn',name);
-  localStorage.setItem('ee',email);
-  localStorage.setItem('pp',phone);
-  location.href='./contacts.html';
-})
-f[0].value=pName;
-f[1].value=pEmail;
-f[2].value=pPhone;
+
+function profPageLoad() {
+  var profCloseBu = document.getElementById('closeProf');
+  var f = document.getElementById('profForm');
+  profCloseBu.addEventListener('click', function() {
+    var name = f['profName'].value;
+    var email = f['profEmail'].value;
+    var phone = f['profPhone'].value;
+    localStorage.setItem('nn', name);
+    localStorage.setItem('ee', email);
+    localStorage.setItem('pp', phone);
+    location.href = './contacts.html';
+  })
+  f[0].value = pName;
+  f[1].value = pEmail;
+  f[2].value = pPhone;
 }
-var pName =localStorage.getItem('nn');
-var pEmail =localStorage.getItem('ee');
-var pPhone =localStorage.getItem('pp');
+var pName = localStorage.getItem('nn');
+var pEmail = localStorage.getItem('ee');
+var pPhone = localStorage.getItem('pp');
