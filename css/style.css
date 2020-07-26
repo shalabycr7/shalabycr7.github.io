@@ -200,7 +200,7 @@ body {
   border: 1px dotted #465ef6;
 }
 
-#chatFt #send {
+/*#chatFt #send {
   height: 60px;
   width: 60px;
   border: none;
@@ -209,6 +209,14 @@ body {
   margin-top: 14px;
   transition: background-color 0.3s;
   cursor: pointer;
+ 
+}*/
+
+.fa-reply{
+  font-size: 35px;
+  color: #465ef6;
+  margin-top: 26px;
+ 
 }
 
 #chatFt button:active {
