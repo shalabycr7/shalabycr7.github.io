@@ -289,6 +289,8 @@ function getTime(classN) {
 function profPageLoad() {
   var profCloseBu = document.getElementById('closeProf');
   var f = document.getElementById('profForm');
+  var j=document.getElementById('ch');
+  
   profCloseBu.addEventListener('click', function() {
     var name = f['profName'].value;
     var email = f['profEmail'].value;
@@ -300,12 +302,28 @@ function profPageLoad() {
     localStorage.setItem('ee', email);
     localStorage.setItem('pp', phone);
     location.href = './contacts.html';
+
+    
     }
   })
   f[0].value = pName;
   f[1].value = pEmail;
   f[2].value = pPhone;
+  
+  j.addEventListener('change',function(){
+    var k=j.checked.toString();
+    localStorage.setItem('check',k)
+    
+  })
+  
+  if (kk=='true'){
+    j.checked=true;
+    location.href='./contacts.html'
+  }
 }
 var pName = localStorage.getItem('nn');
 var pEmail = localStorage.getItem('ee');
 var pPhone = localStorage.getItem('pp');
+var kk=localStorage.getItem('check');
+
+function cg(){alert('hpppp')}
