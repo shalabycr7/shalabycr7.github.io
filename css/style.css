@@ -30,7 +30,7 @@ body {
   margin: 45px 0 0 80px;
   color: white;
   font-size: 30px;
-  font-family: monospace;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 #panel {
