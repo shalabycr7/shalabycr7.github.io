@@ -1,22 +1,12 @@
-var per = ["Alex Green", "Sarah Micheal", "Sydney Padilha", "Katty Alexon"];
-
-function rldChatNames() {
-  var c = document.getElementsByClassName("perName");
-  c[0].innerHTML = per[0];
-  c[1].innerHTML = per[1];
-  c[2].innerHTML = per[2];
-  c[3].innerHTML = per[3];
-}
-
-function j() {
-  var k = document.getElementsByClassName("perName");
+function getContNames() {
+  var contactName = document.getElementsByClassName("perName");
   var picsMain = document.getElementsByClassName("pImg");
 
-  for (var i = 0; i < k.length; i++) {
-    k[i].addEventListener("click", clickChat1);
-    k[i].setAttribute("name", k[i].innerHTML);
-    k[i].setAttribute("dataIndex", i);
-    k[i].addEventListener("click", function() {
+  for (var i = 0; i < contactName.length; i++) {
+    contactName[i].addEventListener("click", clickChat1);
+    contactName[i].setAttribute("name", contactName[i].innerHTML);
+    contactName[i].setAttribute("dataIndex", i);
+    contactName[i].addEventListener("click", function() {
       var index = this.getAttribute("name");
       var dtIndex = this.getAttribute("dataIndex");
       localStorage.setItem("names", index);
@@ -55,7 +45,7 @@ function prof() {
 }
 
 function indexLoad() {
-  rldChatNames();
+ 
   var a = document.getElementById("allCont");
   var b = document.getElementById("all");
   var c = document.getElementById("allP");
@@ -70,7 +60,7 @@ function indexLoad() {
   }
 
   prof();
-  j();
+  getContNames();
 }
 
 function clickChat1() {
@@ -109,8 +99,8 @@ function callsTap() {
   hp1.style.border = "none";
   var hp2 = document.getElementById("friendsP");
   hp2.style.border = "none";
-  rldChatNames();
-  j();
+  
+  getContNames();
   prof();
 }
 
@@ -121,7 +111,7 @@ function frndTap() {
   var hp2 = document.getElementById("allP");
   hp2.style.border = "none";
   rldChatNames();
-  j();
+  getContNames();
   prof();
 }
 
@@ -135,12 +125,13 @@ function Tap(secId, tabN) {
 
 function add() {
   on(1);
-  var userForm=document.getElementById('userName');
-  var name = userForm.value;
   var addUser=document.getElementById('addUser');
-  addUser.addEventListener('click', function(){
-    alert(name);
-  if (name == "" || name == null) {} else {
+  addUser.addEventListener('click', addContacts);
+  function addContacts(){
+    var user=document.getElementById('userForm');
+    var name = user['userName'].value;
+  if (name == "" || name == null) {alert('Please complete the information')} 
+  else {
     var oldDiv = document.getElementById("allCont");
     var newName = document.createElement("h3");
     newName.className = "perName";
@@ -156,20 +147,19 @@ function add() {
     newDiv.className = "contact";
     newName.innerHTML = name;
     newDiv.appendChild(newName);
-    // newName.addEventListener('click', clickChat1);
     sec.appendChild(newDiv);
     oldDiv.appendChild(sec);
     newDiv.scrollIntoView();
     localStorage.setItem("page", oldDiv.innerHTML);
-    j();
+    getContNames();
     prof();
-    console.log(
-      "pls reload the page to interact with the new contact you added"
-    );
-    /*  per.push(newName);
-    alert(per[per.length-1].innerHTML);*/
+    user.reset();
+    off(1);
+    addUser.removeEventListener('click',addContacts);
   }
-  })
+  
+  }
+  
 }
 
 function chatPageLoad() {
