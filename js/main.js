@@ -32,7 +32,9 @@ function prof() {
   var b = document.getElementById("showImg");
   for (var i = 0; i < k.length; i++) {
     // alert(k[i].innerHTML);
-    k[i].addEventListener("click", on);
+    k[i].addEventListener("click", function(){
+      document.getElementsByClassName("overlay")[0].style.display = "block";
+    });
     k[i].setAttribute("data-index", i);
     k[i].addEventListener("click", function() {
       if (this.getAttribute("data-index") == 0) {
@@ -132,7 +134,12 @@ function Tap(secId, tabN) {
 }
 
 function add() {
-  var name = prompt("Contact Name");
+  on(1);
+  var userForm=document.getElementById('userName');
+  var name = userForm.value;
+  var addUser=document.getElementById('addUser');
+  addUser.addEventListener('click', function(){
+    alert(name);
   if (name == "" || name == null) {} else {
     var oldDiv = document.getElementById("allCont");
     var newName = document.createElement("h3");
@@ -162,6 +169,7 @@ function add() {
     /*  per.push(newName);
     alert(per[per.length-1].innerHTML);*/
   }
+  })
 }
 
 function chatPageLoad() {
@@ -255,12 +263,12 @@ function creat_reciver(text) {
   }
 }
 
-function on() {
-  document.getElementById("overlay").style.display = "block";
+function on(i) {
+  document.getElementsByClassName("overlay")[i].style.display = "block";
 }
 
-function off() {
-  document.getElementById("overlay").style.display = "none";
+function off(i) {
+  document.getElementsByClassName("overlay")[i].style.display = "none";
 }
 
 var ss = localStorage.getItem("y");
