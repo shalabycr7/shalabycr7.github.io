@@ -296,6 +296,7 @@ function profPageLoad() {
     var email = f['profEmail'].value;
     var phone = f['profPhone'].value;
     if (name == '' || email == '' || phone == '') {
+      alert('please enter your information')
 
     } else {
       localStorage.setItem('nn', name);

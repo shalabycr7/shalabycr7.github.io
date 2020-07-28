@@ -413,7 +413,7 @@ body {
   height: 120px;
   position: relative;
   border-radius: 20px;
-  border: 1px solid green;
+ 
 }
 
 .fa-user-circle {
@@ -435,7 +435,6 @@ body {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
-  border: 1px solid red;
   overflow: hidden;
 }
 
