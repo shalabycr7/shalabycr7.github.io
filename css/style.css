@@ -27,7 +27,7 @@ body {
 }
 
 #mainHeader h1 {
-  margin: 45px 0 0 80px;
+  margin: 40px 0 0 83px;
   color: white;
   font-size: 30px;
   font-family: 'Noto Sans', sans-serif;
@@ -108,6 +108,7 @@ body {
   margin: 20px 0 10px 20px;
   font-family: 'Noto Sans', sans-serif;
   cursor: pointer;
+  font-weight: 500;
 }
 
 .contact img {
@@ -566,8 +567,6 @@ body {
 .tap{
   padding: 0;
   margin:0;
-  border: 2px solid red;
-    font-family: 'Noto Sans', sans-serif;
 }
 .tapBu{
   color: #465ef6 ;
@@ -577,5 +576,5 @@ body {
   border: none;
   background: none;
   font-size: 19px;
-    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
 }
