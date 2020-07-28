@@ -570,10 +570,10 @@ body {
     font-family: 'Noto Sans', sans-serif;
 }
 .tapBu{
-  color: blue;
-  padding: 5px 10px;
+  color: #465ef6 ;
+  padding: 4px 6px;
   outline: none;
-  margin: 2px 6px;
+  margin: 4px 2px 0 10px;
   border: none;
   background: none;
   font-size: 19px;

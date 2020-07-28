@@ -130,6 +130,7 @@ function add() {
     if (name == "" || name == null) { alert('Please complete the information') }
     else {
       var oldDiv = document.getElementById("all");
+      var v = document.getElementById("friends");
       var newName = document.createElement("h3");
       newName.className = "perName";
       var newDiv = document.createElement("div");
@@ -146,6 +147,8 @@ function add() {
       newDiv.appendChild(newName);
       sec.appendChild(newDiv);
       oldDiv.appendChild(sec);
+      
+     
       newDiv.scrollIntoView();
       localStorage.setItem("page", oldDiv.innerHTML);
       getContNames();
@@ -167,17 +170,8 @@ function chatPageLoad() {
 
 function chatPicChange() {
   var chatp = document.getElementById("chatProfile");
-  if (io == 0) {
-    chatp.src = "pics/1.jpg";
-  } else if (io == 1) {
-    chatp.src = "pics/2.jpg";
-  } else if (io == 2) {
-    chatp.src = "pics/3.jpg";
-  } else if (io == 3) {
-    chatp.src = "pics/4.jpg";
-  } else {
+
     chatp.src = "pics/EmptyProf.svg";
-  }
 }
 
 function creat_sender(text) {
