@@ -413,11 +413,12 @@ body {
   height: 120px;
   position: relative;
   border-radius: 20px;
+  border: 1px solid green;
 }
 
 .fa-user-circle {
   color: #465ef6;
-  font-size: 100px;
+  font-size: 90px;
   border: 1px solid #2B32B2;
   padding: 9px;
   position: absolute;
