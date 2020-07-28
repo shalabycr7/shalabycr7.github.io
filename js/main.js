@@ -22,7 +22,7 @@ function prof() {
   var b = document.getElementById("showImg");
   for (var i = 0; i < k.length; i++) {
     // alert(k[i].innerHTML);
-    k[i].addEventListener("click", function(){
+    k[i].addEventListener("click", function() {
       document.getElementsByClassName("overlay")[0].style.display = "block";
     });
     k[i].setAttribute("data-index", i);
@@ -45,7 +45,7 @@ function prof() {
 }
 
 function indexLoad() {
- 
+
   var a = document.getElementById("allCont");
   var b = document.getElementById("all");
   var c = document.getElementById("allP");
@@ -99,7 +99,7 @@ function callsTap() {
   hp1.style.border = "none";
   var hp2 = document.getElementById("friendsP");
   hp2.style.border = "none";
-  
+
   getContNames();
   prof();
 }
@@ -125,41 +125,40 @@ function Tap(secId, tabN) {
 
 function add() {
   on(1);
-  var addUser=document.getElementById('addUser');
+  var addUser = document.getElementById('addUser');
   addUser.addEventListener('click', addContacts);
-  function addContacts(){
-    var user=document.getElementById('userForm');
+
+  function addContacts() {
+    var user = document.getElementById('userForm');
     var name = user['userName'].value;
-  if (name == "" || name == null) {alert('Please complete the information')} 
-  else {
-    var oldDiv = document.getElementById("allCont");
-    var newName = document.createElement("h3");
-    newName.className = "perName";
-    var newDiv = document.createElement("div");
-    var sec = document.getElementById("newAdd");
-    var newPicDiv = document.createElement("div");
-    var newPPic = document.createElement("img");
-    newPPic.className = "pImg";
-    newPPic.src = "pics/EmptyProf.svg";
-    newPicDiv.appendChild(newPPic);
-    newPicDiv.className = "profilePic";
-    newDiv.appendChild(newPicDiv);
-    newDiv.className = "contact";
-    newName.innerHTML = name;
-    newDiv.appendChild(newName);
-    sec.appendChild(newDiv);
-    oldDiv.appendChild(sec);
-    newDiv.scrollIntoView();
-    localStorage.setItem("page", oldDiv.innerHTML);
-    getContNames();
-    prof();
-    user.reset();
-    off(1);
-    addUser.removeEventListener('click',addContacts);
+    if (name == "" || name == null) { alert('Please complete the information') }
+    else {
+      var oldDiv = document.getElementById("allCont");
+      var newName = document.createElement("h3");
+      newName.className = "perName";
+      var newDiv = document.createElement("div");
+      var sec = document.getElementById("newAdd");
+      var newPicDiv = document.createElement("div");
+      var newPPic = document.createElement("img");
+      newPPic.className = "pImg";
+      newPPic.src = "pics/EmptyProf.svg";
+      newPicDiv.appendChild(newPPic);
+      newPicDiv.className = "profilePic";
+      newDiv.appendChild(newPicDiv);
+      newDiv.className = "contact";
+      newName.innerHTML = name;
+      newDiv.appendChild(newName);
+      sec.appendChild(newDiv);
+      oldDiv.appendChild(sec);
+      newDiv.scrollIntoView();
+      localStorage.setItem("page", oldDiv.innerHTML);
+      getContNames();
+      prof();
+      user.reset();
+      off(1);
+      addUser.removeEventListener('click', addContacts);
+    }
   }
-  
-  }
-  
 }
 
 function chatPageLoad() {
