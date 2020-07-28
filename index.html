@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Raleway:ital,wght@1,100&display=swap" rel="stylesheet">
 </head>
 
-<body onload="profPageLoad()" >
+<body onload="profPageLoad()">
   <header id="profHeader">
   </header>
   <div id="profContainer">
@@ -18,7 +18,7 @@
       <i class="far fa-user-circle"></i>
     </div>
     <div id="profDetails">
-      <form id="profForm" action="" method="get" accept-charset="utf-8">
+      <form id="profForm" action="" method="post" accept-charset="utf-8">
         <label for="profName">Name</label>
         <br />
         <input type="text" name="profName" id="profName" />
@@ -31,20 +31,14 @@
         <br />
         <input type="number" name="profPhone" id="profPhone" />
         <br />
-        </form>
-         
-       
-<label class="container">Remember Me
-<input type="checkbox" id="ch" >
-<span class="checkmark"></span>
-</label>
-  
-  
-  
+        <label class="container">Remember Me
+          <input type="checkbox" id="ch">
+          <span class="checkmark"></span>
+        </label>
+      </form>
       <button id="closeProf">Log in</button>
     </div>
   </div>
-  
   <script src="js/main.js"></script>
 </body>
 

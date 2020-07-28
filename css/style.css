@@ -396,7 +396,7 @@ body {
 }
 
 #profContainer {
-  height: 500px;
+  height: 80%;
   width: 80%;
   border-radius: 10px;
   position: absolute;
@@ -429,11 +429,13 @@ body {
 
 #profDetails {
   width: 90%;
-  height: 330px;
+  height: 80%;
   margin-top: 5px;
   position: absolute;
   left: 50%;
   transform: translate(-50%);
+  border: 1px solid red;
+  overflow: hidden;
 }
 
 #profDetails #profForm input {
