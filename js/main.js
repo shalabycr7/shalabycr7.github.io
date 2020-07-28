@@ -47,14 +47,14 @@ function prof() {
 function indexLoad() {
 
   var a = document.getElementById("all");
-  
+
 
   if (page == null) {
     //alert('hh');
   } else {
     a.innerHTML = page;
   }
-openTap('all','0');
+  openTap('all', '0');
   prof();
   getContNames();
 }
@@ -147,8 +147,6 @@ function add() {
       newDiv.appendChild(newName);
       sec.appendChild(newDiv);
       oldDiv.appendChild(sec);
-      
-     
       newDiv.scrollIntoView();
       localStorage.setItem("page", oldDiv.innerHTML);
       getContNames();
@@ -171,7 +169,7 @@ function chatPageLoad() {
 function chatPicChange() {
   var chatp = document.getElementById("chatProfile");
 
-    chatp.src = "pics/EmptyProf.svg";
+  chatp.src = "pics/EmptyProf.svg";
 }
 
 function creat_sender(text) {
@@ -291,23 +289,17 @@ function profPageLoad() {
       localStorage.setItem('ee', email);
       localStorage.setItem('pp', phone);
       location.href = './contacts.html';
-
-
     }
   })
   f[0].value = pName;
   f[1].value = pEmail;
   f[2].value = pPhone;
-
   j.addEventListener('change', function() {
     var k = j.checked.toString();
     localStorage.setItem('check', k)
-
   })
-
   if (kk == 'true') {
     j.checked = true;
-
     document.body.innerHTML = '';
     location.href = './contacts.html'
   }
@@ -317,28 +309,25 @@ var pEmail = localStorage.getItem('ee');
 var pPhone = localStorage.getItem('pp');
 var kk = localStorage.getItem('check');
 
-function openTap(tapName,n) {
+function openTap(tapName, n) {
   var i;
   var x = document.getElementsByClassName("tap");
-  var k= document.getElementsByClassName('tapBu')[n];
-  k.style.borderBottom='4px solid #465ef6';
+  var k = document.getElementsByClassName('tapBu')[n];
+  k.style.borderBottom = '4px solid #465ef6';
   if (n == 0) {
     document.getElementsByClassName('tapBu')[1].style.borderBottom = 'none';
     document.getElementsByClassName('tapBu')[2].style.borderBottom = 'none';
   }
- else if (n==1) {
-    document.getElementsByClassName('tapBu')[0].style.borderBottom='none';
+  else if (n == 1) {
+    document.getElementsByClassName('tapBu')[0].style.borderBottom = 'none';
     document.getElementsByClassName('tapBu')[2].style.borderBottom = 'none';
   }
-  else{
+  else {
     document.getElementsByClassName('tapBu')[1].style.borderBottom = 'none';
     document.getElementsByClassName('tapBu')[0].style.borderBottom = 'none';
   }
-  
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  
   document.getElementById(tapName).style.display = "block";
- 
 }

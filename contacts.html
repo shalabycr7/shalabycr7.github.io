@@ -39,33 +39,23 @@
         <img src="pics/6.jpg" alt="" />
       </div>
     </div>
-  <div class="tapHeader">
+    <div class="tapHeader">
       <button class="tapBu" onclick="openTap('all','0')">All</button>
-      <button class="tapBu"  onclick="openTap('friends','1')">Friends</button>
+      <button class="tapBu" onclick="openTap('friends','1')">Friends</button>
       <button class="tapBu" onclick="openTap('calls','2')">Calls</button>
     </div>
   </div>
   <div id="contactsPanal">
-
-
-
-
-
-<div id="all" class="w3-container tap">
-
-</div>
-
-<div id="friends" class="w3-container tap" style="display:none">
-  <h2>Paris</h2>
-  <p>Paris is the capital of France.</p> 
-</div>
-
-<div id="calls" class="w3-container tap" style="display:none">
-  <h2>Tokyo</h2>
-  <p>Tokyo is the capital of Japan.</p>
-</div>
-
-
+    <div id="all" class="w3-container tap">
+    </div>
+    <div id="friends" class="w3-container tap" style="display:none">
+      <h2>Paris</h2>
+      <p>Paris is the capital of France.</p>
+    </div>
+    <div id="calls" class="w3-container tap" style="display:none">
+      <h2>Tokyo</h2>
+      <p>Tokyo is the capital of Japan.</p>
+    </div>
   </div>
   <section>
     <div class="overlay" onclick="off(0)">
@@ -99,7 +89,6 @@
             <label for="userPhone">Phone</label>
             <br />
             <input type="number" name="userPhone" id="userPhone" />
-            
           </form>
           <button id="addUser">Add</button>
         </div>
