@@ -54,7 +54,7 @@ function indexLoad() {
   } else {
     a.innerHTML = page;
   }
-openTap('all');
+openTap('all','0');
   prof();
   getContNames();
 }
@@ -326,11 +326,24 @@ var kk = localStorage.getItem('check');
 function openTap(tapName,n) {
   var i;
   var x = document.getElementsByClassName("tap");
-  var k = document.getElementsByClassName("tapBu")[n];
+  var k= document.getElementsByClassName('tapBu')[n];
+  k.style.borderBottom='4px solid #465ef6';
+  if (n == 0) {
+    document.getElementsByClassName('tapBu')[1].style.borderBottom = 'none';
+    document.getElementsByClassName('tapBu')[2].style.borderBottom = 'none';
+  }
+ else if (n==1) {
+    document.getElementsByClassName('tapBu')[0].style.borderBottom='none';
+    document.getElementsByClassName('tapBu')[2].style.borderBottom = 'none';
+  }
+  else{
+    document.getElementsByClassName('tapBu')[1].style.borderBottom = 'none';
+    document.getElementsByClassName('tapBu')[0].style.borderBottom = 'none';
+  }
+  
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  
   
   document.getElementById(tapName).style.display = "block";
  

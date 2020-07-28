@@ -80,12 +80,12 @@ body {
   width: 100%;
   height: 90%;
   position: absolute;
-  top: 260px;
+  top: 255px;
   z-index: 2;
   background-color: #f0f0f0;
   overflow: scroll;
-  border: 3px solid red;
-  padding-top: 25px;
+ 
+  padding-top: 12px;
 }
 
 .contact {
@@ -93,7 +93,7 @@ body {
   width: 90%;
   /* border: 1px solid blue;*/
   display: flex;
-  margin: 20px 0 10px 2px;
+  margin: 18px 0 10px 2px;
   overflow: auto;
   border-left: 4px solid #dadfe3;
   border-radius: 8px;
@@ -105,22 +105,24 @@ body {
 }
 
 .perName {
-  margin: 27px 0 10px 20px;
+  margin: 20px 0 10px 20px;
   font-family: 'Noto Sans', sans-serif;
   cursor: pointer;
 }
 
 .contact img {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
+
 }
 
 .profilePic {
-  width: 70px;
-  height: 70px;
-  border-radius: 35px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
   margin: 5px 0 0 10px;
   overflow: hidden;
+ 
 }
 
 #chatHeader {
@@ -562,9 +564,10 @@ body {
   
 }
 .tap{
-  border: 2px solid green;
   padding: 0;
   margin:0;
+  border: 2px solid red;
+    font-family: 'Noto Sans', sans-serif;
 }
 .tapBu{
   color: blue;
@@ -574,4 +577,5 @@ body {
   border: none;
   background: none;
   font-size: 19px;
+    font-family: 'Noto Sans', sans-serif;
 }
