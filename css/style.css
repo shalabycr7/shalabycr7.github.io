@@ -84,6 +84,8 @@ body {
   z-index: 2;
   background-color: #f0f0f0;
   overflow: scroll;
+  border: 3px solid red;
+  padding-top: 25px;
 }
 
 .contact {
@@ -91,7 +93,7 @@ body {
   width: 90%;
   /* border: 1px solid blue;*/
   display: flex;
-  margin: 20px 0 10px 10px;
+  margin: 20px 0 10px 2px;
   overflow: auto;
   border-left: 4px solid #dadfe3;
   border-radius: 8px;
@@ -386,7 +388,7 @@ body {
   color: white;
 }
 
-.Tap {
+.tap {
   cursor: pointer;
 }
 
@@ -558,4 +560,18 @@ body {
   top: 50%;
   transform: translate(-50%,-50%);
   
+}
+.tap{
+  border: 2px solid green;
+  padding: 0;
+  margin:0;
+}
+.tapBu{
+  color: blue;
+  padding: 5px 10px;
+  outline: none;
+  margin: 2px 6px;
+  border: none;
+  background: none;
+  font-size: 19px;
 }

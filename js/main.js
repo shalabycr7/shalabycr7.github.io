@@ -46,19 +46,15 @@ function prof() {
 
 function indexLoad() {
 
-  var a = document.getElementById("allCont");
-  var b = document.getElementById("all");
-  var c = document.getElementById("allP");
-  var k = document.getElementById("newAdd");
-  c.style.borderBottom = "2px solid #465EF6";
-  a.innerHTML = b.innerHTML;
+  var a = document.getElementById("all");
+  
 
   if (page == null) {
     //alert('hh');
   } else {
     a.innerHTML = page;
   }
-
+openTap('all');
   prof();
   getContNames();
 }
@@ -133,7 +129,7 @@ function add() {
     var name = user['userName'].value;
     if (name == "" || name == null) { alert('Please complete the information') }
     else {
-      var oldDiv = document.getElementById("allCont");
+      var oldDiv = document.getElementById("all");
       var newName = document.createElement("h3");
       newName.className = "perName";
       var newDiv = document.createElement("div");
@@ -155,6 +151,7 @@ function add() {
       getContNames();
       prof();
       user.reset();
+      alert(sec.innerHTML)
       off(1);
       addUser.removeEventListener('click', addContacts);
     }
@@ -325,3 +322,16 @@ var pName = localStorage.getItem('nn');
 var pEmail = localStorage.getItem('ee');
 var pPhone = localStorage.getItem('pp');
 var kk = localStorage.getItem('check');
+
+function openTap(tapName,n) {
+  var i;
+  var x = document.getElementsByClassName("tap");
+  var k = document.getElementsByClassName("tapBu")[n];
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  
+  
+  document.getElementById(tapName).style.display = "block";
+ 
+}

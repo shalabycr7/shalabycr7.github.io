@@ -8,6 +8,7 @@
   <title>ChatApp</title>
   <script src="https://kit.fontawesome.com/9848e2ba21.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
 <body onload="indexLoad()">
@@ -38,43 +39,33 @@
         <img src="pics/6.jpg" alt="" />
       </div>
     </div>
-    <h3 id="allP" class="Tap" onclick="allTap()">All</h3>
-    <h3 id="friendsP" class="Tap" onclick="frndTap()">Friends</h3>
-    <h3 id="callsP" class="Tap" onclick="callsTap()">Calls</h3>
+  <div class="tapHeader">
+      <button class="tapBu" onclick="openTap('all')">All</button>
+      <button class="tapBu"  onclick="openTap('friends')">Friends</button>
+      <button class="tapBu" onclick="openTap('calls')">Calls</button>
+    </div>
   </div>
   <div id="contactsPanal">
-    <section id="allCont"></section>
-    <section id="all">
-      <div class="contact c1">
-        <div class="profilePic">
-          <img class="pImg" src="pics/1.jpg" alt="" />
-        </div>
-        <h3 class="perName">Alex</h3>
-      </div>
- 
-    </section>
-    <section id="friendsCont">
-      <div class="contact c1">
-        <div class="profilePic">
-          <img class="pImg" src="pics/1.jpg" alt="" />
-        </div>
-        <h3 class="perName"></h3>
-      </div>
-      <div class="contact c2">
-        <div class="profilePic">
-          <img class="pImg" src="pics/2.jpg" alt="" />
-        </div>
-        <h3 class="perName"></h3>
-      </div>
-    </section>
-    <section id="callsCont">
-      <div class="contact c1">
-        <div class="profilePic">
-          <img class="pImg" src="pics/1.jpg" alt="" />
-        </div>
-        <h3 class="perName"></h3>
-      </div>
-    </section>
+
+
+
+
+
+<div id="all" class="w3-container tap">
+
+</div>
+
+<div id="friends" class="w3-container tap" style="display:none">
+  <h2>Paris</h2>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="calls" class="w3-container tap" style="display:none">
+  <h2>Tokyo</h2>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+
   </div>
   <section>
     <div class="overlay" onclick="off(0)">
