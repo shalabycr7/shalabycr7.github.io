@@ -14,6 +14,7 @@ body {
   position: absolute;
   top: 45px;
   left: 20px;
+  cursor: pointer;
 }
 
 #mainHeader {
@@ -35,19 +36,10 @@ body {
   width: 100%;
   height: 150px;
   background-color: white;
-  border-radius: 24px;
+  border-radius: 22px;
   position: absolute;
   top: 120px;
   z-index: 3;
-}
-
-#panel h3 {
-  display: inline-block;
-  margin-top: 12px;
-  margin-left: 15px;
-  padding: 0 10px;
-  color: #465ef6;
-  font-family: 'Noto Sans', sans-serif;
 }
 
 .cont {
@@ -90,7 +82,7 @@ body {
   width: 95%;
   display: flex;
   margin-left:50%;
-  margin-top: 10px;
+  margin-top: 15px;
   transform: translate(-50%);
   overflow: hidden;
   border-left: 4px solid #dadfe3;
@@ -110,30 +102,17 @@ body {
   cursor: pointer;
   font-weight: 500;
   margin-left:15px;
-  border: 1px solid red;
+  
 }
 
 .contact .pImg{
   width: 60px;
   height: 60px;
-  border: 1px solid red;
   margin-left:10px;
   border-radius:50%;
-  
-
 }
 
-.profilePic {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-margin-left:8px;
-  overflow: hidden;
-  border: 1px solid green;
-  margin-left:10px;
-}
 #chatHeader {
-  position: static;
   width: 100%;
   height: 80px;
   display: flex;
@@ -145,7 +124,9 @@ margin-left:8px;
 #chatHeader img {
   width: 50px;
   height: 50px;
-  border-radius: 25px;
+  border-radius: 50%;
+  padding: 5px;
+  
 }
 
 #chatHeader h3 {
@@ -156,16 +137,6 @@ margin-left:8px;
   font-weight: bold;
   font-family: 'Noto Sans', sans-serif;
   cursor: pointer;
-}
-
-#msgName {
-  color: red;
-}
-
-#chatHeader img {
-  margin-top: 10px;
-  margin-right: 5px;
-  fill: red;
 }
 
 #chatHeader h4 {
@@ -212,30 +183,14 @@ margin-left:8px;
 
 }
 
-/*#chatFt #send {
-  height: 60px;
-  width: 60px;
-  border: none;
-  outline: none;
-  border-radius: 30px;
-  margin-top: 14px;
-  transition: background-color 0.3s;
-  cursor: pointer;
- 
-}*/
 
 .fa-reply {
   font-size: 35px;
   color: #465ef6;
   margin-top: 37px;
+  cursor: pointer;
 
 }
-
-#chatFt button:active {
-  background-color: #465ef6;
-  color: white;
-}
-
 #add {
   width: 33px;
   height: 30px;
@@ -244,9 +199,7 @@ margin-left:8px;
   position: absolute;
   top: 43px;
   right: 15px;
-  /*background: url("../pics/add.png");
-  background-size: contain;*/
-  filter: invert(100%);
+  cursor: pointer;
 }
 
 #sender {
@@ -306,8 +259,6 @@ margin-left:8px;
   cursor: pointer;
 }
 
-
-
 #chatHeader #msgName {
   position: absolute;
   top: 10px;
@@ -347,10 +298,6 @@ margin-left:8px;
   text-align: center;
   vertical-align: middle;
   color: white;
-}
-
-.tap {
-  cursor: pointer;
 }
 
 #profHeader {
@@ -444,6 +391,7 @@ margin-left:8px;
   margin-top: 15px;
   font-family: 'Noto Sans', sans-serif;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 /* Customize the label (the container) */
@@ -524,7 +472,6 @@ margin-left:8px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-
 }
 
 .tap {
@@ -541,6 +488,7 @@ margin-left:8px;
   background: none;
   font-size: 19px;
   font-weight: bold;
+  cursor: pointer;
 }
 #picExtendCont{
   width: 65%;
@@ -591,5 +539,5 @@ padding: 5px 10px;
   float: right;
   color:#465ef6;
   margin: 10px 10px 2px 2px;
-  
+  cursor: pointer;
 }
