@@ -25,6 +25,7 @@ body {
   position: static;
   top: 0px;
 }
+
 #mainHeader h1 {
   margin: 40px 0 0 83px;
   color: white;
@@ -81,7 +82,7 @@ body {
   height: 80px;
   width: 95%;
   display: flex;
-  margin-left:50%;
+  margin-left: 50%;
   margin-top: 15px;
   transform: translate(-50%);
   overflow: hidden;
@@ -89,8 +90,8 @@ body {
   border-radius: 8px;
   translate: background-color 1s;
   justify-content: flex-start;
-  align-items:center;
-  
+  align-items: center;
+
 }
 
 .contact:active {
@@ -101,15 +102,15 @@ body {
   font-family: 'Noto Sans', sans-serif;
   cursor: pointer;
   font-weight: 500;
-  margin-left:15px;
-  
+  margin-left: 15px;
+
 }
 
-.contact .pImg{
+.contact .pImg {
   width: 60px;
   height: 60px;
-  margin-left:10px;
-  border-radius:50%;
+  margin-left: 10px;
+  border-radius: 50%;
 }
 
 #chatHeader {
@@ -126,16 +127,24 @@ body {
   height: 50px;
   border-radius: 50%;
   padding: 5px;
-  
+margin-top: 10px;
 }
 
 #chatHeader h3 {
-  margin-top: 20px;
+  margin-top: 25px;
   margin-right: 5px;
   color: #465ef6;
   font-size: 20px;
   font-weight: bold;
   font-family: 'Noto Sans', sans-serif;
+
+}
+.fa-arrow-left{
+  color:#465ef6;
+  font-size: 30px;
+  margin-top: 19px;
+  margin-left:5px;
+  padding: 5px;
   cursor: pointer;
 }
 
@@ -191,6 +200,7 @@ body {
   cursor: pointer;
 
 }
+
 #add {
   width: 33px;
   height: 30px;
@@ -490,26 +500,29 @@ body {
   font-weight: bold;
   cursor: pointer;
 }
-#picExtendCont{
+
+#picExtendCont {
   width: 65%;
   height: 310px;
-  border-top:3px solid #465ef6;
-    border-bottom:3px solid #465ef6;
-  border-radius:20px;
-  background-color:white;
+  border-top: 3px solid #465ef6;
+  border-bottom: 3px solid #465ef6;
+  border-radius: 20px;
+  background-color: white;
   position: relative;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
-#showImg{
+
+#showImg {
   color: #465ef6;
   font-size: 200px;
   margin-top: 15px;
   position: absolute;
-  left:50%;
+  left: 50%;
   transform: translate(-50%);
 }
+
 .dbar {
   height: 60px;
   width: 100%;
@@ -520,7 +533,7 @@ body {
   align-items: center;
   background-color: white;
   margin-top: 4px;
-  
+
   position: absolute;
   bottom: 20px;
   padding: 10px 10px;
@@ -529,15 +542,17 @@ body {
 .dbar i {
   color: #465ef6;
   font-size: 33px;
-padding: 5px 10px;
+  padding: 5px 10px;
 }
+
 .dbar i:hover {
   border-bottom: 3px solid #465ef6;
 }
-.fa-times-circle{
+
+.fa-times-circle {
   font-size: 30px;
   float: right;
-  color:#465ef6;
+  color: #465ef6;
   margin: 10px 10px 2px 2px;
   cursor: pointer;
 }

@@ -19,22 +19,16 @@ var lop = localStorage.getItem("names");
 
 function prof() {
   var k = document.getElementsByClassName("pImg");
-  var b = document.getElementById("showImg");
   for (var i = 0; i < k.length; i++) {
-    // alert(k[i].innerHTML);
     k[i].addEventListener("click", function() {
       document.getElementsByClassName("overlay")[0].style.display = "block";
     });
-    k[i].setAttribute("data-index", i);
-  
   }
 }
 
 function indexLoad() {
 
   var a = document.getElementById("all");
-
-
   if (page == null) {
     //alert('hh');
   } else {
@@ -101,7 +95,6 @@ function add() {
       getContNames();
       prof();
       user.reset();
-      console.log(sec.innerHTML)
       off(1);
       addUser.removeEventListener('click', addContacts);
     }
@@ -117,7 +110,6 @@ function chatPageLoad() {
 
 function chatPicChange() {
   var chatp = document.getElementById("chatProfile");
-
   chatp.src = "pics/user-circle.svg";
 }
 
