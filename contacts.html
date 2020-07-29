@@ -9,12 +9,12 @@
   <script src="https://kit.fontawesome.com/9848e2ba21.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Raleway:ital,wght@1,100&display=swap" rel="stylesheet">
 </head>
 
 <body onload="indexLoad()">
   <header id="mainHeader">
-    <!--  <div id="add" onclick="add()"></div> -->
-    <img id="add" src="pics/user-plus.svg" alt="add buttons" onclick="add()" />
+    <img id="add" src="pics/user-plus.svg" alt="add button" onclick="add()" />
     <i class="fas fa-users" onclick="location.href='index.html'"></i>
     <h1>Chat</h1>
   </header>
@@ -47,7 +47,9 @@
   </div>
   <div id="contactsPanal">
     <div id="all" class="w3-container tap">
-      <div class="contact"><div class="profilePic"><img class="pImg" src="pics/EmptyProf.svg" data-index="1"></div><h3 class="perName" name="Ali" dataindex="1">Ali</h3> 
+      <div class="contact">
+        <img class="pImg" src="pics/user-circle.svg" data-index="1">
+        <h3 class="perName" name="Ali" dataindex="1">Ali</h3>
       </div>
     </div>
     <div id="friends" class="w3-container tap" style="display:none">
@@ -61,23 +63,14 @@
   </div>
   <section>
     <div class="overlay" onclick="off(0)">
-      <!-- <div class="show">
-        <img id="showImg" src="pics/EmptyProf.svg" alt="h" />
+      <div id="picExtendCont">
+        <i class="far fa-user-circle" id="showImg"></i>
         <div class="dbar">
           <i class="fas fa-comment-dots" id="chatButton"></i>
           <i class="fas fa-phone-alt"></i>
           <i class="fas fa-video"></i>
           <i class="fas fa-info-circle"></i>
         </div>
-      </div> -->
-      <div id="picExtendCont">
-          <i class="far fa-user-circle" id="showImg"></i>
-           <div class="dbar">
-             <i class="fas fa-comment-dots" id="chatButton"></i>
-             <i class="fas fa-phone-alt"></i>
-             <i class="fas fa-video"></i>
-             <i class="fas fa-info-circle"></i>
-           </div>
       </div>
     </div>
   </section>
@@ -85,6 +78,7 @@
     <div class="overlay">
       <div class="profContainer">
         <div class="profEditPic">
+          <i class="far fa-times-circle" onclick="off(1)"></i>
           <i class="far fa-user-circle"></i>
         </div>
         <div class="profDetails">

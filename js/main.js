@@ -26,21 +26,7 @@ function prof() {
       document.getElementsByClassName("overlay")[0].style.display = "block";
     });
     k[i].setAttribute("data-index", i);
-    k[i].addEventListener("click", function() {
-      if (this.getAttribute("data-index") == 0) {
-        b.src = k[0].src;
-      } else if (this.getAttribute("data-index") == 1) {
-        b.src = k[1].src;
-      } else if (this.getAttribute("data-index") == 2) {
-        b.src = k[2].src;
-      } else if (this.getAttribute("data-index") == 3) {
-        b.src = k[3].src;
-      } else if (this.getAttribute("data-index") == 4) {
-        b.src = k[4].src;
-      } else {
-        b.src = "pics/EmptyProf.svg";
-      }
-    });
+  
   }
 }
 
@@ -85,40 +71,6 @@ function bot() {
   }
 }
 
-function allTap() {
-  indexLoad();
-}
-
-function callsTap() {
-  Tap("callsCont", "callsP");
-  var hp1 = document.getElementById("allP");
-  hp1.style.border = "none";
-  var hp2 = document.getElementById("friendsP");
-  hp2.style.border = "none";
-
-  getContNames();
-  prof();
-}
-
-function frndTap() {
-  Tap("friendsCont", "friendsP");
-  var hp1 = document.getElementById("callsP");
-  hp1.style.border = "none";
-  var hp2 = document.getElementById("allP");
-  hp2.style.border = "none";
-  rldChatNames();
-  getContNames();
-  prof();
-}
-
-function Tap(secId, tabN) {
-  var tapName = document.getElementById(secId);
-  var actSec = document.getElementById("allCont");
-  actSec.innerHTML = tapName.innerHTML;
-  var hp = document.getElementById(tabN);
-  hp.style.borderBottom = "2px solid #465EF6";
-}
-
 function add() {
   on(1);
   var addUser = document.getElementById('addUser');
@@ -135,13 +87,10 @@ function add() {
       newName.className = "perName";
       var newDiv = document.createElement("div");
       var sec = document.getElementById("newAdd");
-      var newPicDiv = document.createElement("div");
       var newPPic = document.createElement("img");
       newPPic.className = "pImg";
-      newPPic.src = "pics/EmptyProf.svg";
-      newPicDiv.appendChild(newPPic);
-      newPicDiv.className = "profilePic";
-      newDiv.appendChild(newPicDiv);
+      newPPic.src = "pics/user-circle.svg";
+      newDiv.appendChild(newPPic);
       newDiv.className = "contact";
       newName.innerHTML = name;
       newDiv.appendChild(newName);
@@ -169,7 +118,7 @@ function chatPageLoad() {
 function chatPicChange() {
   var chatp = document.getElementById("chatProfile");
 
-  chatp.src = "pics/EmptyProf.svg";
+  chatp.src = "pics/user-circle.svg";
 }
 
 function creat_sender(text) {
