@@ -42,20 +42,7 @@ function indexLoad() {
   getContNames();
   
   n();
-  }
-  function n(){
-    var k = document.getElementsByClassName("contact");
-    
-    var kl = document.getElementsByClassName("perName");
-  for (var i = 0; i < k.length; i++) {
-    k[i].setAttribute('ne',kl[i].innerHTML);
-    k[i].addEventListener('click', function() {
-      
-      alert(this.getAttribute('ne'));
-    })
-  }
-  
-  document.getElementsByClassName("overlay")[0].style.display = "block";
+   document.getElementsByClassName("overlay")[0].style.display = "block";
   profPageLoad();
 
   if (pName == null) {
@@ -65,8 +52,18 @@ function indexLoad() {
   } else {
     document.getElementsByClassName("overlay")[0].style.display = "none";
   }
-
-
+  }
+  function n(){
+    var k = document.getElementsByClassName("contact");
+    var kl = document.getElementsByClassName("perName");
+  for (var i = 0; i < k.length; i++) {
+    k[i].setAttribute('outName',kl[i].innerHTML);
+    k[i].addEventListener('click', function() {
+      var otName=this.getAttribute('outName');
+      localStorage.setItem('ot',otName);
+     
+    })
+  }
 }
 
 function clickChat1() {
@@ -126,6 +123,7 @@ function add() {
       getContNames();
       prof();
       off(2);
+      n();
       user.reset();
 
       addUser.removeEventListener('click', addContacts);;
@@ -311,6 +309,8 @@ function cc() {
   document.getElementById('closeProf').style.display = 'none';
   document.getElementById('close').style.display = 'block';
   document.getElementsByClassName('container')[0].style.display = 'none'
+  
+  document.getElementById('add').style.display = 'none';
   var input = document.querySelectorAll('#profForm  input');
   for (var i = 0; i < input.length; i++) {
     input[i].setAttribute('readonly', true);
@@ -318,8 +318,8 @@ function cc() {
 
 }
 function info(){
-  
- alert('u');
-
+  var mm=localStorage.getItem('ot');
+ cc();
+document.getElementById('profName').value=mm;
 }
 //var nc =localStorage.getItem('ll');
