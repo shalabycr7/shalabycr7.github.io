@@ -101,7 +101,7 @@ function add() {
       newDiv.appendChild(newName);
       sec.appendChild(newDiv);
       oldDiv.appendChild(sec);
-      newDiv.scrollIntoView();
+      //newDiv.scrollIntoView();
       localStorage.setItem("page", oldDiv.innerHTML);
       getContNames();
       prof();
@@ -284,4 +284,15 @@ function openTap(tapName, n) {
     x[i].style.display = "none";
   }
   document.getElementById(tapName).style.display = "block";
+}
+function cc() {
+  on(0);
+  document.getElementById('closeProf').style.display='none';
+  document.getElementById('close').style.display='block';
+  document.getElementsByClassName('container')[0].style.display='none'
+ var input= document.querySelectorAll('#profForm  input');
+ for (var i = 0; i < input.length; i++) {
+   input[i].setAttribute('readonly',true);
+ }
+  
 }
