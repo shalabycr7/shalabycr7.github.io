@@ -152,7 +152,7 @@ function add() {
       getContNames();
       prof();
       user.reset();
-      alert(sec.innerHTML)
+      console.log(sec.innerHTML)
       off(1);
       addUser.removeEventListener('click', addContacts);
     }
