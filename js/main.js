@@ -42,6 +42,8 @@ function indexLoad() {
   
   if (pName==null) {
     document.getElementsByClassName("overlay")[0].style.display = "block";
+    document.getElementsByClassName("overlay")[0].style.backgroundColor='white';
+    document.getElementById("add").style.display = "none";
   } else {
     document.getElementsByClassName("overlay")[0].style.display = "none";
   }
