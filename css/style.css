@@ -93,7 +93,7 @@ body {
   margin-top: 10px;
   transform: translate(-50%);
   overflow: hidden;
-  border-right: 4px solid #dadfe3;
+  border-left: 4px solid #dadfe3;
   border-radius: 8px;
   translate: background-color 1s;
   justify-content: flex-start;
