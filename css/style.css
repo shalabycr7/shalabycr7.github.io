@@ -143,7 +143,7 @@ margin-top: 10px;
   color:#465ef6;
   font-size: 30px;
   margin-top: 19px;
-  margin-left:5px;
+  margin-left:2px;
   padding: 5px;
   cursor: pointer;
 }
@@ -155,7 +155,9 @@ margin-top: 10px;
   transform: translate(-50%, -50%);
   color: #818382;
 }
-
+#chatHeader h4:before{
+  content: "🟢 ";
+}
 #chatArea {
   width: 100%;
   height: 100%;
@@ -316,7 +318,7 @@ margin-top: 10px;
 }
 
 .profContainer {
-  height: 82%;
+  height: 600px;
   width: 80%;
   border-radius: 10px;
   position: absolute;
