@@ -21,7 +21,7 @@ function prof() {
   var k = document.getElementsByClassName("pImg");
   for (var i = 0; i < k.length; i++) {
     k[i].addEventListener("click", function() {
-      document.getElementsByClassName("overlay")[0].style.display = "block";
+      document.getElementsByClassName("overlay")[1].style.display = "block";
     });
   }
 }
@@ -37,6 +37,16 @@ function indexLoad() {
   openTap('all', '0');
   prof();
   getContNames();
+  document.getElementsByClassName("overlay")[0].style.display = "block";
+  profPageLoad();
+  
+  if (pName==null) {
+    document.getElementsByClassName("overlay")[0].style.display = "block";
+  } else {
+    document.getElementsByClassName("overlay")[0].style.display = "none";
+  }
+  
+  
 }
 
 function clickChat1() {
@@ -66,14 +76,15 @@ function bot() {
 }
 
 function add() {
-  on(1);
+  on(2);
   var addUser = document.getElementById('addUser');
   addUser.addEventListener('click', addContacts);
 
   function addContacts() {
     var user = document.getElementById('userForm');
     var name = user['userName'].value;
-    if (name == "" || name == null) { alert('Please complete the information') }
+    if (name == '') { alert('Please complete the information') }
+    
     else {
       var oldDiv = document.getElementById("all");
       var v = document.getElementById("friends");
@@ -94,9 +105,11 @@ function add() {
       localStorage.setItem("page", oldDiv.innerHTML);
       getContNames();
       prof();
+       off(2);
       user.reset();
-      off(1);
-      addUser.removeEventListener('click', addContacts);
+      
+      addUser.removeEventListener('click', addContacts);;
+      
     }
   }
 }
@@ -226,10 +239,10 @@ function profPageLoad() {
       alert('please enter your information')
 
     } else {
-      localStorage.setItem('nn', name);
-      localStorage.setItem('ee', email);
-      localStorage.setItem('pp', phone);
-      location.href = './contacts.html';
+      localStorage.setItem('loginName', name);
+      localStorage.setItem('loginEmail', email);
+      localStorage.setItem('loginPhone', phone);
+      document.getElementsByClassName("overlay")[0].style.display = "none";
     }
   })
   f[0].value = pName;
@@ -241,13 +254,13 @@ function profPageLoad() {
   })
   if (kk == 'true') {
     j.checked = true;
-    document.body.innerHTML = '';
-    location.href = './contacts.html'
+
+    document.getElementsByClassName("overlay")[0].style.display = "none";
   }
 }
-var pName = localStorage.getItem('nn');
-var pEmail = localStorage.getItem('ee');
-var pPhone = localStorage.getItem('pp');
+var pName = localStorage.getItem('loginName');
+var pEmail = localStorage.getItem('loginEmail');
+var pPhone = localStorage.getItem('loginPhone');
 var kk = localStorage.getItem('check');
 
 function openTap(tapName, n) {

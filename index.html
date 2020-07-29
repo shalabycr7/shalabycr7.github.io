@@ -1,44 +1,138 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Chat</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ChatApp</title>
   <script src="https://kit.fontawesome.com/9848e2ba21.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Raleway:ital,wght@1,100&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Raleway:ital,wght@1,100&display=swap" rel="stylesheet">
 </head>
 
-<body onload="profPageLoad()">
-  <header id="profHeader">
-  </header>
-  <div class="profContainer">
-    <div class="profEditPic">
-      <i class="far fa-user-circle"></i>
+<body onload="indexLoad()">
+
+    <div class="overlay">
+       <header id="profHeader">
+       </header>
+       <div class="profContainer">
+         <div class="profEditPic">
+           <i class="far fa-user-circle"></i>
+         </div>
+         <div class="profDetails">
+           <form id="profForm" action="" method="post" accept-charset="utf-8">
+             <label for="profName">Name</label>
+             <br />
+             <input type="text" name="profName" id="profName" />
+             <br />
+             <label for="profEmail">E-mail</label>
+             <br />
+             <input type="email" name="profEmail" id="profEmail" />
+             <br />
+             <label for="profPhone">Phone</label>
+             <br />
+             <input type="number" name="profPhone" id="profPhone" />
+             <br />
+             <label class="container">Remember Me
+               <input type="checkbox" id="ch">
+               <span class="checkmark"></span>
+             </label>
+           </form>
+           <button id="closeProf">Log in</button>
+         </div>
+       </div>
     </div>
-    <div class="profDetails">
-      <form id="profForm" action="" method="post" accept-charset="utf-8">
-        <label for="profName">Name</label>
-        <br />
-        <input type="text" name="profName" id="profName" />
-        <br />
-        <label for="profEmail">E-mail</label>
-        <br />
-        <input type="email" name="profEmail" id="profEmail" />
-        <br />
-        <label for="profPhone">Phone</label>
-        <br />
-        <input type="number" name="profPhone" id="profPhone" />
-        <br />
-        <label class="container">Remember Me
-          <input type="checkbox" id="ch">
-          <span class="checkmark"></span>
-        </label>
-      </form>
-      <button id="closeProf">Log in</button>
+    
+  <header id="mainHeader">
+    <img id="add" src="pics/user-plus.svg" alt="add button" onclick="add()" />
+    <i class="fas fa-users" ></i>
+    <h1>Chat</h1>
+  </header>
+  <div id="panel">
+    <div id="status">
+      <div class="cont">
+        <img src="pics/1.jpg" alt="" />
+      </div>
+      <div class="cont">
+        <img src="pics/2.jpg" alt="" />
+      </div>
+      <div class="cont">
+        <img src="pics/3.jpg" alt="" />
+      </div>
+      <div class="cont">
+        <img src="pics/4.jpg" alt="" />
+      </div>
+      <div class="cont">
+        <img src="pics/5.jpg" alt="" />
+      </div>
+      <div class="cont">
+        <img src="pics/6.jpg" alt="" />
+      </div>
+    </div>
+    <div class="tapHeader">
+      <button class="tapBu" onclick="openTap('all','0')">All</button>
+      <button class="tapBu" onclick="openTap('friends','1')">Friends</button>
+      <button class="tapBu" onclick="openTap('calls','2')">Calls</button>
     </div>
   </div>
+  <div id="contactsPanal">
+    <div id="all" class="w3-container tap">
+      <div class="contact">
+        <img class="pImg" src="pics/user-circle.svg" data-index="1">
+        <h3 class="perName" name="Ali" dataindex="1">Ali</h3>
+      </div>
+    </div>
+    <div id="friends" class="w3-container tap" style="display:none">
+      <h2>Paris</h2>
+      <p>Paris is the capital of France.</p>
+    </div>
+    <div id="calls" class="w3-container tap" style="display:none">
+      <h2>Tokyo</h2>
+      <p>Tokyo is the capital of Japan.</p>
+    </div>
+  </div>
+  <section>
+    <div class="overlay" onclick="off(1)">
+      <div id="picExtendCont">
+        <i class="far fa-user-circle" id="showImg"></i>
+        <div class="dbar">
+          <i class="fas fa-comment-dots" id="chatButton"></i>
+          <i class="fas fa-phone-alt"></i>
+          <i class="fas fa-video"></i>
+          <i class="fas fa-info-circle"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="overlay">
+      <div class="profContainer">
+        <div class="profEditPic">
+          <i class="far fa-times-circle" onclick="off(2)"></i>
+          <i class="far fa-user-circle"></i>
+        </div>
+        <div class="profDetails">
+          <form id="userForm" method="post" accept-charset="utf-8">
+            <label for="userName">Name</label>
+            <br />
+            <input type="text" name="userName" id="userName" />
+            <br />
+            <label for="userfEmail">E-mail</label>
+            <br />
+            <input type="email" name="userEmail" id="userEmail" />
+            <br />
+            <label for="userPhone">Phone</label>
+            <br />
+            <input type="number" name="userPhone" id="userPhone" />
+          </form>
+          <button id="addUser">Add</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="newAdd"></section>
   <script src="js/main.js"></script>
 </body>
 
