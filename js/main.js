@@ -42,13 +42,14 @@ function indexLoad() {
   getContNames();
   
   n();
-   document.getElementsByClassName("overlay")[0].style.display = "block";
-  profPageLoad();
+   
 
-  if (pName == null) {
-    document.getElementsByClassName("overlay")[0].style.display = "block";
+
+  if (pName == null || pEmail==null || pPhone==null) {
+      profPageLoad();
+   /* document.getElementsByClassName("overlay")[0].style.display = "block";
     document.getElementsByClassName("overlay")[0].style.backgroundColor = 'white';
-    document.getElementById("add").style.display = "none";
+    document.getElementById("add").style.display = "none";*/
   } else {
     document.getElementsByClassName("overlay")[0].style.display = "none";
   }
@@ -245,6 +246,7 @@ function getTime(classN) {
 }
 
 function profPageLoad() {
+  on(0);
   var profCloseBu = document.getElementById('closeProf');
   var f = document.getElementById('profForm');
   var j = document.getElementById('ch');
@@ -305,12 +307,11 @@ function openTap(tapName, n) {
 }
 
 function cc() {
-  on(0);
+    on(0);
   document.getElementById('closeProf').style.display = 'none';
   document.getElementById('close').style.display = 'block';
   document.getElementsByClassName('container')[0].style.display = 'none'
   
-  document.getElementById('add').style.display = 'none';
   var input = document.querySelectorAll('#profForm  input');
   for (var i = 0; i < input.length; i++) {
     input[i].setAttribute('readonly', true);
@@ -319,7 +320,11 @@ function cc() {
 }
 function info(){
   var mm=localStorage.getItem('ot');
- cc();
-document.getElementById('profName').value=mm;
+  alert(mm)
+ /* document.getElementById('addUser').style.display = 'none';
+  
+on(2);
+
+document.getElementById('userName').value=mm;*/
 }
 //var nc =localStorage.getItem('ll');
