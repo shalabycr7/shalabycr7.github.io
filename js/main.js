@@ -320,11 +320,12 @@ function cc() {
 }
 function info(){
   var mm=localStorage.getItem('ot');
-  alert(mm)
- /* document.getElementById('addUser').style.display = 'none';
-  
-on(2);
-
-document.getElementById('userName').value=mm;*/
+  alert(mm);
+  on(3);
+document.getElementById('userN').value=mm;
+ var input = document.querySelectorAll('#user  input');
+  for (var i = 0; i < input.length; i++) {
+    input[i].setAttribute('readonly', true);
+  }
 }
 //var nc =localStorage.getItem('ll');
