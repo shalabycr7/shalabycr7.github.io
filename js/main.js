@@ -44,14 +44,23 @@ function indexLoad() {
    profPageLoad();
 document.getElementsByClassName("overlay")[0].style.backgroundColor = 'white';
   }
+  
+  
   function n(){
     var k = document.getElementsByClassName("contact");
     var kl = document.getElementsByClassName("perName");
+    
+    
+    
   for (var i = 0; i < k.length; i++) {
     k[i].setAttribute('outName',kl[i].innerHTML);
+   
     k[i].addEventListener('click', function() {
+  
       var otName=this.getAttribute('outName');
+      var bb=this.getAttribute('pu');
       localStorage.setItem('ot',otName);
+     localStorage.setItem('addEmail',bb);
      
     })
   }
@@ -91,7 +100,8 @@ function add() {
   function addContacts() {
     var user = document.getElementById('userForm');
     var name = user['userName'].value;
-    if (name == '') { alert('Please complete the information') }
+    var mol=user['userEmail'].value;
+    if (name == ''||mol=='') { alert('Please complete the information') }
 
     else {
       var oldDiv = document.getElementById("all");
@@ -109,6 +119,9 @@ function add() {
       newDiv.appendChild(newName);
       sec.appendChild(newDiv);
       oldDiv.appendChild(sec);
+      newDiv.setAttribute('pu',mol);
+      var cv=newDiv.getAttribute('pu');
+      
       //newDiv.scrollIntoView();
       localStorage.setItem("page", oldDiv.innerHTML);
       getContNames();
@@ -314,9 +327,11 @@ function cc() {
 }
 function info(){
   var mm=localStorage.getItem('ot');
-  alert(mm);
+  var em=localStorage.getItem('addEmail');
+  
   on(3);
 document.getElementById('userN').value=mm;
+document.getElementById('userE').value=em;
  var input = document.querySelectorAll('#user  input');
   for (var i = 0; i < input.length; i++) {
     input[i].setAttribute('readonly', true);
