@@ -1,4 +1,4 @@
-function getContNames() {
+/*function getContNames() {
   var contactName = document.getElementsByClassName("perName");
   var picsMain = document.getElementsByClassName("pImg");
   
@@ -7,16 +7,16 @@ function getContNames() {
   for (var i = 0; i < contactName.length; i++) {
     contactName[i].addEventListener("click", clickChat1);
     contactName[i].setAttribute("name", contactName[i].innerHTML);
-    contactName[i].setAttribute("dataIndex", i);
+    
     contactName[i].addEventListener("click", function() {
       var index = this.getAttribute("name");
       var dtIndex = this.getAttribute("dataIndex");
       localStorage.setItem("names", index);
-      localStorage.setItem("dtI", dtIndex.toString());
+      
       
     });
   }
-}
+}*/
 var io = localStorage.getItem("dtI");
 var lop = localStorage.getItem("names");
 
@@ -39,7 +39,7 @@ function indexLoad() {
   }
   openTap('all', '0');
   prof();
-  getContNames();
+  //getContNames();
   n();
    profPageLoad();
 document.getElementsByClassName("overlay")[0].style.backgroundColor = 'white';
@@ -53,6 +53,7 @@ document.getElementsByClassName("overlay")[0].style.backgroundColor = 'white';
     
     
   for (var i = 0; i < k.length; i++) {
+    kl[i].addEventListener("click", clickChat1);
     k[i].setAttribute('outName',kl[i].innerHTML);
    
     k[i].addEventListener('click', function() {
@@ -124,7 +125,6 @@ function add() {
       
       //newDiv.scrollIntoView();
       localStorage.setItem("page", oldDiv.innerHTML);
-      getContNames();
       prof();
       off(2);
       n();
@@ -139,7 +139,7 @@ function add() {
 function chatPageLoad() {
   creat_sender("Welcome");
   var mName = document.getElementById("msgName");
-  mName.innerHTML = lop;
+  mName.innerHTML = localStorage.getItem('ot');;
   chatPicChange();
 }
 
@@ -337,4 +337,4 @@ document.getElementById('userE').value=em;
     input[i].setAttribute('readonly', true);
   }
 }
-//var nc =localStorage.getItem('ll');
+
