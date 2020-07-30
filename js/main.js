@@ -1,25 +1,3 @@
-/*function getContNames() {
-  var contactName = document.getElementsByClassName("perName");
-  var picsMain = document.getElementsByClassName("pImg");
-  
-
-
-  for (var i = 0; i < contactName.length; i++) {
-    contactName[i].addEventListener("click", clickChat1);
-    contactName[i].setAttribute("name", contactName[i].innerHTML);
-    
-    contactName[i].addEventListener("click", function() {
-      var index = this.getAttribute("name");
-      var dtIndex = this.getAttribute("dataIndex");
-      localStorage.setItem("names", index);
-      
-      
-    });
-  }
-}*/
-var io = localStorage.getItem("dtI");
-var lop = localStorage.getItem("names");
-
 function prof() {
   var k = document.getElementsByClassName("pImg");
   for (var i = 0; i < k.length; i++) {
@@ -32,37 +10,29 @@ function prof() {
 function indexLoad() {
 
   var a = document.getElementById("all");
-  if (page == null) {
-    //alert('hh');
-  } else {
+  if (page == null) {} else {
     a.innerHTML = page;
   }
   openTap('all', '0');
   prof();
-  //getContNames();
   n();
-   profPageLoad();
-document.getElementsByClassName("overlay")[0].style.backgroundColor = 'white';
-  }
-  
-  
-  function n(){
-    var k = document.getElementsByClassName("contact");
-    var kl = document.getElementsByClassName("perName");
-    
-    
-    
+  profPageLoad();
+  document.getElementsByClassName("overlay")[0].style.backgroundColor = 'white';
+}
+
+function n() {
+  var k = document.getElementsByClassName("contact");
+  var kl = document.getElementsByClassName("perName");
   for (var i = 0; i < k.length; i++) {
     kl[i].addEventListener("click", clickChat1);
-    k[i].setAttribute('outName',kl[i].innerHTML);
-   
+    k[i].setAttribute('outName', kl[i].innerHTML);
+
     k[i].addEventListener('click', function() {
-  
-      var otName=this.getAttribute('outName');
-      var bb=this.getAttribute('pu');
-      localStorage.setItem('ot',otName);
-     localStorage.setItem('addEmail',bb);
-     
+
+      var otName = this.getAttribute('outName');
+      var emailInfo = this.getAttribute('email');
+      localStorage.setItem('addName', otName);
+      localStorage.setItem('addEmail', emailInfo);
     })
   }
 }
@@ -101,12 +71,12 @@ function add() {
   function addContacts() {
     var user = document.getElementById('userForm');
     var name = user['userName'].value;
-    var mol=user['userEmail'].value;
-    if (name == ''||mol=='') { alert('Please complete the information') }
+    var Eml = user['userEmail'].value;
+    if (name == '' || Eml == '') { alert('Please complete the information') }
 
     else {
       var oldDiv = document.getElementById("all");
-      var v = document.getElementById("friends");
+      
       var newName = document.createElement("h3");
       newName.className = "perName";
       var newDiv = document.createElement("div");
@@ -120,18 +90,15 @@ function add() {
       newDiv.appendChild(newName);
       sec.appendChild(newDiv);
       oldDiv.appendChild(sec);
-      newDiv.setAttribute('pu',mol);
-      var cv=newDiv.getAttribute('pu');
       
+      newDiv.setAttribute('email', Eml);
       //newDiv.scrollIntoView();
       localStorage.setItem("page", oldDiv.innerHTML);
       prof();
       off(2);
       n();
       user.reset();
-
-      addUser.removeEventListener('click', addContacts);;
-
+      addUser.removeEventListener('click', addContacts);
     }
   }
 }
@@ -139,7 +106,7 @@ function add() {
 function chatPageLoad() {
   creat_sender("Welcome");
   var mName = document.getElementById("msgName");
-  mName.innerHTML = localStorage.getItem('ot');;
+  mName.innerHTML = localStorage.getItem('addName');;
   chatPicChange();
 }
 
@@ -249,9 +216,9 @@ function getTime(classN) {
 }
 
 function profPageLoad() {
-  if (pName == null || pEmail==null || pPhone==null) {
-  on(0);
-    
+  if (pName == null || pEmail == null || pPhone == null) {
+    on(0);
+
   }
 
   var profCloseBu = document.getElementById('closeProf');
@@ -314,27 +281,27 @@ function openTap(tapName, n) {
 }
 
 function cc() {
-    on(0);
+  on(0);
   document.getElementById('closeProf').style.display = 'none';
   document.getElementById('close').style.display = 'block';
   document.getElementsByClassName('container')[0].style.display = 'none'
-  
+
   var input = document.querySelectorAll('#profForm  input');
   for (var i = 0; i < input.length; i++) {
     input[i].setAttribute('readonly', true);
   }
 
 }
-function info(){
-  var mm=localStorage.getItem('ot');
-  var em=localStorage.getItem('addEmail');
-  
+
+function info() {
+  var mm = localStorage.getItem('addName');
+  var em = localStorage.getItem('addEmail');
+
   on(3);
-document.getElementById('userN').value=mm;
-document.getElementById('userE').value=em;
- var input = document.querySelectorAll('#user  input');
+  document.getElementById('userN').value = mm;
+  document.getElementById('userE').value = em;
+  var input = document.querySelectorAll('#user  input');
   for (var i = 0; i < input.length; i++) {
     input[i].setAttribute('readonly', true);
   }
 }
-

@@ -330,7 +330,7 @@ body {
   transform: translate(-50%);
   background-color: white;
   z-index: 4;
-  border-bottom: 3px solid #465ef6;
+  border-bottom: 4px solid #465ef6;
 }
 
 .profEditPic {
@@ -372,18 +372,18 @@ body {
   margin-top: 2px;
   border: none;
   outline: none;
-  border-bottom: 2px dotted #101CA6;
+  border-bottom: 2px dotted rgba(70, 94, 246,0.8);
   transition: width 1s;
-  font-size: 18px;
-  font-weight: 600;
-  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  font-family:  sans-serif;
   color: #465ef6;
 }
 
 .profDetails label {
   color: #465ef6;
-  font-size: 19px;
-
+  font-size: 20px;
+font-weight: 500;
   font-family: 'Noto Sans', sans-serif;
 }
 
@@ -391,7 +391,7 @@ body {
 #userForm input:hover,
 #user input:hover {
   width: 100%;
-  border-bottom: 4px solid #465ef6;
+  border-bottom: 2px solid #465ef6;
 }
 
 #closeProf,
@@ -480,17 +480,6 @@ body {
   transform: rotate(45deg);
 }
 
-#addPanel {
-  width: 65%;
-  height: 400px;
-  border: 1px solid red;
-  background-color: white;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .tap {
   padding: 0;
   margin: 0;
@@ -511,8 +500,8 @@ body {
 #picExtendCont {
   width: 65%;
   height: 310px;
-  border-top: 3px solid #465ef6;
-  border-bottom: 3px solid #465ef6;
+  border-top: 4px solid #465ef6;
+  border-bottom: 4px solid #465ef6;
   border-radius: 20px;
   background-color: white;
   position: relative;
