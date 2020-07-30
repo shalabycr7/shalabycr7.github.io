@@ -40,19 +40,9 @@ function indexLoad() {
   openTap('all', '0');
   prof();
   getContNames();
-  
   n();
-   
-
-
-  if (pName == null || pEmail==null || pPhone==null) {
-      profPageLoad();
-   /* document.getElementsByClassName("overlay")[0].style.display = "block";
-    document.getElementsByClassName("overlay")[0].style.backgroundColor = 'white';
-    document.getElementById("add").style.display = "none";*/
-  } else {
-    document.getElementsByClassName("overlay")[0].style.display = "none";
-  }
+   profPageLoad();
+document.getElementsByClassName("overlay")[0].style.backgroundColor = 'white';
   }
   function n(){
     var k = document.getElementsByClassName("contact");
@@ -246,7 +236,11 @@ function getTime(classN) {
 }
 
 function profPageLoad() {
+  if (pName == null || pEmail==null || pPhone==null) {
   on(0);
+    
+  }
+
   var profCloseBu = document.getElementById('closeProf');
   var f = document.getElementById('profForm');
   var j = document.getElementById('ch');

@@ -127,7 +127,7 @@ body {
   height: 50px;
   border-radius: 50%;
   padding: 5px;
-margin-top: 10px;
+  margin-top: 10px;
 }
 
 #chatHeader h3 {
@@ -139,11 +139,12 @@ margin-top: 10px;
   font-family: 'Noto Sans', sans-serif;
 
 }
-.fa-arrow-left{
-  color:#465ef6;
+
+.fa-arrow-left {
+  color: #465ef6;
   font-size: 30px;
   margin-top: 19px;
-  margin-left:2px;
+  margin-left: 2px;
   padding: 5px;
   cursor: pointer;
 }
@@ -155,9 +156,11 @@ margin-top: 10px;
   transform: translate(-50%, -50%);
   color: #818382;
 }
-#chatHeader h4:before{
+
+#chatHeader h4:before {
   content: "🟢 ";
 }
+
 #chatArea {
   width: 100%;
   height: 100%;
@@ -206,7 +209,7 @@ margin-top: 10px;
 #add {
   font-size: 32px;
   outline: none;
-  
+
   position: absolute;
   top: 45px;
   right: 15px;
@@ -361,7 +364,8 @@ margin-top: 10px;
 }
 
 .profDetails #profForm input,
-#userForm input, #user input {
+#userForm input,
+#user input {
   padding: 10px;
   width: 93%;
   margin-bottom: 20px;
@@ -384,7 +388,8 @@ margin-top: 10px;
 }
 
 .profDetails #profForm input:hover,
-#userForm input:hover, #user input:hover {
+#userForm input:hover,
+#user input:hover {
   width: 100%;
   border-bottom: 4px solid #465ef6;
 }
@@ -558,6 +563,7 @@ margin-top: 10px;
   margin: 10px 10px 2px 2px;
   cursor: pointer;
 }
-#close{
+
+#close {
   display: none;
 }

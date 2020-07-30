@@ -9,44 +9,40 @@
   <script src="https://kit.fontawesome.com/9848e2ba21.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Raleway:ital,wght@1,100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Raleway:ital,wght@1,100&display=swap" rel="stylesheet">
 </head>
 
 <body onload="indexLoad()">
-
-    <div class="overlay">
-      
-       <div class="profContainer">
-         <div class="profEditPic">
-                     <i class="far fa-times-circle" id="close" onclick="off(0)"></i>
-           <i class="far fa-user-circle"></i>
-         </div>
-         <div class="profDetails">
-           <form id="profForm" action="" method="post" accept-charset="utf-8">
-             <label for="profName">Name</label>
-             <br />
-             <input type="text" name="profName" id="profName" />
-             <br />
-             <label for="profEmail">E-mail</label>
-             <br />
-             <input type="email" name="profEmail" id="profEmail" />
-             <br />
-             <label for="profPhone">Phone</label>
-             <br />
-             <input type="number" name="profPhone" id="profPhone" />
-             <br />
-             <label class="container">Remember Me
-               <input type="checkbox" id="ch">
-               <span class="checkmark"></span>
-             </label>
-           </form>
-           <button id="closeProf">Log in</button>
-         </div>
-       </div>
+  <div class="overlay">
+    <div class="profContainer">
+      <div class="profEditPic">
+        <i class="far fa-times-circle" id="close" onclick="off(0)"></i>
+        <i class="far fa-user-circle"></i>
+      </div>
+      <div class="profDetails">
+        <form id="profForm" action="" method="post" accept-charset="utf-8">
+          <label for="profName">Name</label>
+          <br />
+          <input type="text" name="profName" id="profName" />
+          <br />
+          <label for="profEmail">E-mail</label>
+          <br />
+          <input type="email" name="profEmail" id="profEmail" />
+          <br />
+          <label for="profPhone">Phone</label>
+          <br />
+          <input type="number" name="profPhone" id="profPhone" />
+          <br />
+          <label class="container">Remember Me
+            <input type="checkbox" id="ch">
+            <span class="checkmark"></span>
+          </label>
+        </form>
+        <button id="closeProf">Log in</button>
+      </div>
     </div>
-    
+  </div>
   <header id="mainHeader">
-    
     <i class="fas fa-user-plus" id="add" onclick="add()"></i>
     <i class="fas fa-users" onclick="cc()"></i>
     <h1>Chat</h1>
@@ -133,8 +129,7 @@
       </div>
     </div>
   </section>
-  
-   <section>
+  <section>
     <div class="overlay">
       <div class="profContainer">
         <div class="profEditPic">
@@ -159,8 +154,6 @@
       </div>
     </div>
   </section>
- 
-  
   <section id="newAdd"></section>
   <script src="js/main.js"></script>
 </body>
