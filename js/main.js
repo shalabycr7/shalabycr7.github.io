@@ -122,7 +122,6 @@ function creat_sender(text) {
   var newText = document.createElement("p");
   newText.innerHTML = text;
   newText.className = "senderP";
-  newSend.style.height = "20px";
   newSend.appendChild(newText);
   textArea.appendChild(newSend);
   var newTimeDiv = document.createElement("div");
@@ -137,13 +136,7 @@ function creat_sender(text) {
   getTime("tms");
   var ln = c[c.length - 1].innerHTML.length;
   var sendLast = c[c.length - 1];
-  if (ln < 33) {
-    newSend.style.height = "20px";
-  } else if (ln > 33 && ln <= 66) {
-    newSend.style.height = "40px";
-  } else {
-    newSend.style.height = eval("ln/33*20") + "px";
-  }
+  
   sendLast.scrollIntoView();
 }
 
@@ -174,11 +167,11 @@ function creat_reciver(text) {
   var ln = c[c.length - 1].innerHTML.length;
   var recLast = c[c.length - 1];
 
-  if (ln < 33) {
+  /*if (ln < 33) {
     newRec.style.height = "20px";
   } else {
     newRec.style.height = eval("ln/33*20") + "px";
-  }
+  }*/
   if (recLast == null) {} else {
     recLast.scrollIntoView();
   }
