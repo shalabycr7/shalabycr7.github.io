@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .fa-users {
@@ -20,7 +20,7 @@ body {
 #mainHeader {
   width: 100%;
   height: 150px;
-  background-image: linear-gradient(to left, #1488cc, #2b32b2);
+  background-image: linear-gradient(to left, #1488CC, #2B32B2);
   border: 1px solid #465ef6;
   position: static;
   top: 0px;
@@ -30,7 +30,7 @@ body {
   margin: 40px 0 0 83px;
   color: white;
   font-size: 30px;
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 #panel {
@@ -91,6 +91,7 @@ body {
   translate: background-color 1s;
   justify-content: flex-start;
   align-items: center;
+
 }
 
 .contact:active {
@@ -98,10 +99,11 @@ body {
 }
 
 .perName {
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   cursor: pointer;
   font-weight: 500;
   margin-left: 15px;
+
 }
 
 .contact .pImg {
@@ -136,7 +138,8 @@ body {
   color: #465ef6;
   font-size: 20px;
   font-weight: bold;
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Noto Sans', sans-serif;
+
 }
 
 .fa-arrow-left {
@@ -162,26 +165,29 @@ body {
 
 #chatArea {
   width: 100%;
-  height: 75%;
+  height:75%;
   position: fixed;
   top: 85px;
   overflow: scroll;
+  
+  
 }
 
 #chatFt {
   width: 100%;
   height: 100px;
-  margin-top: 10px;
+  margin-top:10px;
   position: fixed;
   bottom: 0;
   left: 0;
-  right: 0;
-  background-color: white;
-
+  right:0;
+  background-color:white;
+  
   border: 1px solid blue;
   display: flex;
   justify-content: space-around;
   box-shadow: -4px -8px 20px rgba(0, 0, 0, 0.1);
+  
 }
 
 #chatFt #textBox {
@@ -201,13 +207,16 @@ body {
 
 #chatFt #textBox:hover {
   width: 65%;
+
 }
+
 
 .fa-reply {
   font-size: 35px;
   color: #465ef6;
   margin-top: 37px;
   cursor: pointer;
+
 }
 
 #add {
@@ -223,7 +232,7 @@ body {
 
 #sender {
   width: 60%;
-
+  
   border-radius: 10px;
   margin: 10px 10px;
   background-color: #465ef6;
@@ -231,6 +240,7 @@ body {
   overflow: hidden;
   float: left;
   padding: 2px;
+  
 }
 
 #reciver {
@@ -251,6 +261,7 @@ body {
   margin: 3px 5px;
   word-wrap: break-word;
   white-space: pre-line;
+
 }
 
 #friendsCont {
@@ -294,6 +305,7 @@ body {
   border-radius: 15px;
   display: inline-table;
   background-color: #f0f0f0;
+
 }
 
 .timeRec p {
@@ -321,7 +333,7 @@ body {
 
 #profHeader {
   height: 170px;
-  background-image: linear-gradient(to left, #1488cc, #2b32b2);
+  background-image: linear-gradient(to left, #1488CC, #2B32B2);
 }
 
 .profContainer {
@@ -342,12 +354,13 @@ body {
   height: 120px;
   position: relative;
   border-radius: 20px;
+
 }
 
 .profEditPic .fa-user-circle {
   color: #465ef6;
   font-size: 90px;
-  border: 1px solid #2b32b2;
+  border: 1px solid #2B32B2;
   padding: 9px;
   position: absolute;
   left: 50%;
@@ -375,19 +388,19 @@ body {
   margin-top: 2px;
   border: none;
   outline: none;
-  border-bottom: 2px dotted rgba(70, 94, 246, 0.8);
+  border-bottom: 2px dotted rgba(70, 94, 246,0.8);
   transition: width 1s;
   font-size: 20px;
   font-weight: 400;
-  font-family: sans-serif;
+  font-family:  sans-serif;
   color: #465ef6;
 }
 
 .profDetails label {
   color: #465ef6;
   font-size: 20px;
-  font-weight: 500;
-  font-family: "Noto Sans", sans-serif;
+font-weight: 500;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .profDetails #profForm input:hover,
@@ -409,7 +422,7 @@ body {
   margin-left: 50%;
   transform: translate(-50%);
   margin-top: 15px;
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   margin-bottom: 10px;
   cursor: pointer;
 }
@@ -449,12 +462,12 @@ body {
 }
 
 /* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
+.container:hover input~.checkmark {
   background-color: #ccc;
 }
 
 /* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark {
+.container input:checked~.checkmark {
   background-color: #465ef6;
 }
 
@@ -466,7 +479,7 @@ body {
 }
 
 /* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
+.container input:checked~.checkmark:after {
   display: block;
 }
 
