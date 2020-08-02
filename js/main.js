@@ -1,23 +1,23 @@
 function prof() {
   var k = document.getElementsByClassName("pImg");
   for (var i = 0; i < k.length; i++) {
-    k[i].addEventListener("click", function() {
+    k[i].addEventListener("click", function () {
       document.getElementsByClassName("overlay")[1].style.display = "block";
     });
   }
 }
 
 function indexLoad() {
-
   var a = document.getElementById("all");
-  if (page == null) {} else {
+  if (page == null) {
+  } else {
     a.innerHTML = page;
   }
-  openTap('all', '0');
+  openTap("all", "0");
   prof();
   n();
   profPageLoad();
-  document.getElementsByClassName("overlay")[0].style.backgroundColor = 'white';
+  document.getElementsByClassName("overlay")[0].style.backgroundColor = "white";
 }
 
 function n() {
@@ -25,15 +25,14 @@ function n() {
   var kl = document.getElementsByClassName("perName");
   for (var i = 0; i < k.length; i++) {
     kl[i].addEventListener("click", clickChat1);
-    k[i].setAttribute('outName', kl[i].innerHTML);
+    k[i].setAttribute("outName", kl[i].innerHTML);
 
-    k[i].addEventListener('click', function() {
-
-      var otName = this.getAttribute('outName');
-      var emailInfo = this.getAttribute('email');
-      localStorage.setItem('addName', otName);
-      localStorage.setItem('addEmail', emailInfo);
-    })
+    k[i].addEventListener("click", function () {
+      var otName = this.getAttribute("outName");
+      var emailInfo = this.getAttribute("email");
+      localStorage.setItem("addName", otName);
+      localStorage.setItem("addEmail", emailInfo);
+    });
   }
 }
 
@@ -54,7 +53,8 @@ function sendText() {
 function bot() {
   var se = document.getElementsByClassName("recP");
   var recLast = se[se.length - 1];
-  if (recLast == null) {} else {
+  if (recLast == null) {
+  } else {
     if (recLast.innerHTML.includes("hi")) {
       creat_sender("nice to meet you");
       creat_sender("nice ou");
@@ -65,18 +65,18 @@ function bot() {
 
 function add() {
   on(2);
-  var addUser = document.getElementById('addUser');
-  addUser.addEventListener('click', addContacts);
+  var addUser = document.getElementById("addUser");
+  addUser.addEventListener("click", addContacts);
 
   function addContacts() {
-    var user = document.getElementById('userForm');
-    var name = user['userName'].value;
-    var Eml = user['userEmail'].value;
-    if (name == '' || Eml == '') { alert('Please complete the information') }
-
-    else {
+    var user = document.getElementById("userForm");
+    var name = user["userName"].value;
+    var Eml = user["userEmail"].value;
+    if (name == "" || Eml == "") {
+      alert("Please complete the information");
+    } else {
       var oldDiv = document.getElementById("all");
-      
+
       var newName = document.createElement("h3");
       newName.className = "perName";
       var newDiv = document.createElement("div");
@@ -90,15 +90,15 @@ function add() {
       newDiv.appendChild(newName);
       sec.appendChild(newDiv);
       oldDiv.appendChild(sec);
-      
-      newDiv.setAttribute('email', Eml);
+
+      newDiv.setAttribute("email", Eml);
       //newDiv.scrollIntoView();
       localStorage.setItem("page", oldDiv.innerHTML);
       prof();
       off(2);
       n();
       user.reset();
-      addUser.removeEventListener('click', addContacts);
+      addUser.removeEventListener("click", addContacts);
     }
   }
 }
@@ -106,7 +106,7 @@ function add() {
 function chatPageLoad() {
   creat_sender("Welcome");
   var mName = document.getElementById("msgName");
-  mName.innerHTML = localStorage.getItem('addName');;
+  mName.innerHTML = localStorage.getItem("addName");
   chatPicChange();
 }
 
@@ -136,7 +136,7 @@ function creat_sender(text) {
   getTime("tms");
   var ln = c[c.length - 1].innerHTML.length;
   var sendLast = c[c.length - 1];
-  
+
   sendLast.scrollIntoView();
 }
 
@@ -160,7 +160,7 @@ function creat_reciver(text) {
   textArea.appendChild(newTimeDiv);
   textB.value = "";
   getTime("tm");
-  newRec.addEventListener("mousemove", function() {
+  newRec.addEventListener("mousemove", function () {
     alert("gg");
   });
   var c = document.getElementsByClassName("recP");
@@ -172,7 +172,8 @@ function creat_reciver(text) {
   } else {
     newRec.style.height = eval("ln/33*20") + "px";
   }*/
-  if (recLast == null) {} else {
+  if (recLast == null) {
+  } else {
     recLast.scrollIntoView();
   }
 }
@@ -211,61 +212,57 @@ function getTime(classN) {
 function profPageLoad() {
   if (pName == null || pEmail == null || pPhone == null) {
     on(0);
-
   }
 
-  var profCloseBu = document.getElementById('closeProf');
-  var f = document.getElementById('profForm');
-  var j = document.getElementById('ch');
+  var profCloseBu = document.getElementById("closeProf");
+  var f = document.getElementById("profForm");
+  var j = document.getElementById("ch");
 
-  profCloseBu.addEventListener('click', function() {
-    var name = f['profName'].value;
-    var email = f['profEmail'].value;
-    var phone = f['profPhone'].value;
-    if (name == '' || email == '' || phone == '') {
-      alert('please enter your information')
-
+  profCloseBu.addEventListener("click", function () {
+    var name = f["profName"].value;
+    var email = f["profEmail"].value;
+    var phone = f["profPhone"].value;
+    if (name == "" || email == "" || phone == "") {
+      alert("please enter your information");
     } else {
-      localStorage.setItem('loginName', name);
-      localStorage.setItem('loginEmail', email);
-      localStorage.setItem('loginPhone', phone);
+      localStorage.setItem("loginName", name);
+      localStorage.setItem("loginEmail", email);
+      localStorage.setItem("loginPhone", phone);
       document.getElementsByClassName("overlay")[0].style.display = "none";
     }
-  })
+  });
   f[0].value = pName;
   f[1].value = pEmail;
   f[2].value = pPhone;
-  j.addEventListener('change', function() {
+  j.addEventListener("change", function () {
     var k = j.checked.toString();
-    localStorage.setItem('check', k)
-  })
-  if (kk == 'true') {
+    localStorage.setItem("check", k);
+  });
+  if (kk == "true") {
     j.checked = true;
 
     document.getElementsByClassName("overlay")[0].style.display = "none";
   }
 }
-var pName = localStorage.getItem('loginName');
-var pEmail = localStorage.getItem('loginEmail');
-var pPhone = localStorage.getItem('loginPhone');
-var kk = localStorage.getItem('check');
+var pName = localStorage.getItem("loginName");
+var pEmail = localStorage.getItem("loginEmail");
+var pPhone = localStorage.getItem("loginPhone");
+var kk = localStorage.getItem("check");
 
 function openTap(tapName, n) {
   var i;
   var x = document.getElementsByClassName("tap");
-  var k = document.getElementsByClassName('tapBu')[n];
-  k.style.borderBottom = '4px solid #465ef6';
+  var k = document.getElementsByClassName("tapBu")[n];
+  k.style.borderBottom = "4px solid #465ef6";
   if (n == 0) {
-    document.getElementsByClassName('tapBu')[1].style.borderBottom = 'none';
-    document.getElementsByClassName('tapBu')[2].style.borderBottom = 'none';
-  }
-  else if (n == 1) {
-    document.getElementsByClassName('tapBu')[0].style.borderBottom = 'none';
-    document.getElementsByClassName('tapBu')[2].style.borderBottom = 'none';
-  }
-  else {
-    document.getElementsByClassName('tapBu')[1].style.borderBottom = 'none';
-    document.getElementsByClassName('tapBu')[0].style.borderBottom = 'none';
+    document.getElementsByClassName("tapBu")[1].style.borderBottom = "none";
+    document.getElementsByClassName("tapBu")[2].style.borderBottom = "none";
+  } else if (n == 1) {
+    document.getElementsByClassName("tapBu")[0].style.borderBottom = "none";
+    document.getElementsByClassName("tapBu")[2].style.borderBottom = "none";
+  } else {
+    document.getElementsByClassName("tapBu")[1].style.borderBottom = "none";
+    document.getElementsByClassName("tapBu")[0].style.borderBottom = "none";
   }
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
@@ -275,26 +272,25 @@ function openTap(tapName, n) {
 
 function cc() {
   on(0);
-  document.getElementById('closeProf').style.display = 'none';
-  document.getElementById('close').style.display = 'block';
-  document.getElementsByClassName('container')[0].style.display = 'none'
+  document.getElementById("closeProf").style.display = "none";
+  document.getElementById("close").style.display = "block";
+  document.getElementsByClassName("container")[0].style.display = "none";
 
-  var input = document.querySelectorAll('#profForm  input');
+  var input = document.querySelectorAll("#profForm  input");
   for (var i = 0; i < input.length; i++) {
-    input[i].setAttribute('readonly', true);
+    input[i].setAttribute("readonly", true);
   }
-
 }
 
 function info() {
-  var mm = localStorage.getItem('addName');
-  var em = localStorage.getItem('addEmail');
+  var mm = localStorage.getItem("addName");
+  var em = localStorage.getItem("addEmail");
 
   on(3);
-  document.getElementById('userN').value = mm;
-  document.getElementById('userE').value = em;
-  var input = document.querySelectorAll('#user  input');
+  document.getElementById("userN").value = mm;
+  document.getElementById("userE").value = em;
+  var input = document.querySelectorAll("#user  input");
   for (var i = 0; i < input.length; i++) {
-    input[i].setAttribute('readonly', true);
+    input[i].setAttribute("readonly", true);
   }
 }
