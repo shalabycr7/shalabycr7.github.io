@@ -30,6 +30,8 @@ function n() {
     k[i].addEventListener("click", function () {
       var otName = this.getAttribute("outName");
       var emailInfo = this.getAttribute("email");
+      var phoneInfo = this.getAttribute("phone");
+      localStorage.setItem("addPhone", phoneInfo);
       localStorage.setItem("addName", otName);
       localStorage.setItem("addEmail", emailInfo);
     });
@@ -72,6 +74,7 @@ function add() {
     var user = document.getElementById("userForm");
     var name = user["userName"].value;
     var Eml = user["userEmail"].value;
+    var Phone = user["userPhone"].value;
     if (name == "" || Eml == "") {
       alert("Please complete the information");
     } else {
@@ -92,6 +95,8 @@ function add() {
       oldDiv.appendChild(sec);
 
       newDiv.setAttribute("email", Eml);
+      
+      newDiv.setAttribute("phone", Phone);
       //newDiv.scrollIntoView();
       localStorage.setItem("page", oldDiv.innerHTML);
       prof();
@@ -285,10 +290,12 @@ function cc() {
 function info() {
   var mm = localStorage.getItem("addName");
   var em = localStorage.getItem("addEmail");
+  var pm = localStorage.getItem("addPhone");
 
   on(3);
   document.getElementById("userN").value = mm;
   document.getElementById("userE").value = em;
+  document.getElementById("userP").value = pm;
   var input = document.querySelectorAll("#user  input");
   for (var i = 0; i < input.length; i++) {
     input[i].setAttribute("readonly", true);
