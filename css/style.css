@@ -301,7 +301,7 @@ body {
   height: 22px;
   width: 73px;
   float: right;
-  margin: 8px 10px;
+  margin: 10px 10px;
   border-radius: 15px;
   display: inline-table;
   background-color: #f0f0f0;
@@ -318,7 +318,7 @@ body {
   height: 22px;
   width: 73px;
   float: left;
-  margin: 8px 10px;
+  margin: 10px 10px;
   border-radius: 15px;
   background-color: #465ef6;
   display: inline-table;
