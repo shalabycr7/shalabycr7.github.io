@@ -75,7 +75,7 @@ function add() {
     var name = user["userName"].value;
     var Eml = user["userEmail"].value;
     var Phone = user["userPhone"].value;
-    if (name == "" || Eml == "") {
+    if (name == "" || Eml == ""||phone=="") {
       alert("Please complete the information");
     } else {
       var oldDiv = document.getElementById("all");

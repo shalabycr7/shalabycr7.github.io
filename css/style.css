@@ -383,17 +383,18 @@ body {
 #userForm input,
 #user input {
   padding: 10px;
-  width: 93%;
+  width: 97%;
   margin-bottom: 20px;
   margin-top: 2px;
   border: none;
   outline: none;
-  border-bottom: 2px dotted rgba(70, 94, 246,0.8);
+  border-bottom: 2px solid RGBA(70, 94, 246,0.5);
   transition: width 1s;
   font-size: 20px;
   font-weight: 400;
   font-family:  sans-serif;
   color: #465ef6;
+  
 }
 
 .profDetails label {
@@ -407,7 +408,8 @@ font-weight: 500;
 #userForm input:hover,
 #user input:hover {
   width: 100%;
-  border-bottom: 2px solid #465ef6;
+  border: 2px solid #465ef6;
+  border-radius:8px;
 }
 
 #closeProf,
