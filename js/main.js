@@ -309,4 +309,7 @@ function copyPhoneNumber(){
   pIcon.href=tel;
     
 
+var textBox = document.getElementById("userP"); 
+textBox.value.select(); document.execCommand("copy");
+
 }
