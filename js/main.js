@@ -75,7 +75,7 @@ function add() {
     var name = user["userName"].value;
     var Eml = user["userEmail"].value;
     var Phone = user["userPhone"].value;
-    if (name == "" || Eml == ""||phone=="") {
+    if (name == "" || Eml == "" || Phone=="") {
       alert("Please complete the information");
     } else {
       var oldDiv = document.getElementById("all");
@@ -300,4 +300,13 @@ function info() {
   for (var i = 0; i < input.length; i++) {
     input[i].setAttribute("readonly", true);
   }
+}
+function copyPhoneNumber(){
+  var pIcon=document.getElementById('phoneLink');
+
+  
+  var tel='tel:'+localStorage.getItem("addPhone")
+  pIcon.href=tel;
+    
+
 }
