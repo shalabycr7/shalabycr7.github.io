@@ -160,7 +160,9 @@ body {
 }
 
 #chatHeader h4:before {
-  content: "🟢 ";
+  content: url("../pics/check-circle.svg");
+ padding: 4px;
+ 
 }
 
 #chatArea {
@@ -182,8 +184,7 @@ body {
   left: 0;
   right:0;
   background-color:white;
-  
-  border: 1px solid blue;
+
   display: flex;
   justify-content: space-around;
   box-shadow: -4px -8px 20px rgba(0, 0, 0, 0.1);
@@ -195,19 +196,20 @@ body {
   height: 45px;
   margin: 20px 0 0 20px;
   border: none;
-  border-radius: 5px;
-  text-indent: 1px;
+  border-radius: 10px;
+ 
   outline: none;
   font-size: 17px;
   overflow: auto;
   padding: 5px 10px;
-  border-bottom: 3px solid #465ef6;
-  transition: width 1s;
+  border-bottom: 1px solid #465ef6;
+ 
+ 
 }
 
 #chatFt #textBox:hover {
-  width: 65%;
-
+  
+border: 1px solid #465ef6;
 }
 
 
