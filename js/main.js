@@ -353,6 +353,9 @@ function copyPhoneNumber() {
 
   var tel = "tel:" + localStorage.getItem("addPhone");
   pIcon.href = tel;
+  
+  function copy() { var copyText = document.getElementById("userP"); copyText.select(); document.execCommand("copy"); } document.querySelector("#phoneLink").addEventListener("click", copy);
+  
 }
 
 var x, i, j, l, ll, selElmnt, a, b, c;
