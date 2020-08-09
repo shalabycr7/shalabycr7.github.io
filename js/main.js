@@ -75,11 +75,9 @@ function add() {
     var name = user["userName"].value;
     var Eml = user["userEmail"].value;
     var Phone = user["userPhone"].value;
-    var cj = document.getElementById('vv');
+    var cj = document.getElementById("vv");
 
- 
-   
-    if (name == "" || Eml == "" || Phone=="") {
+    if (name == "" || Eml == "" || Phone == "") {
       alert("Please complete the information");
     } else {
       var oldDiv = document.getElementById("all");
@@ -99,11 +97,10 @@ function add() {
       oldDiv.appendChild(sec);
 
       newDiv.setAttribute("email", Eml);
-      
+
       newDiv.setAttribute("phone", Phone);
       //newDiv.scrollIntoView();
-      
-      
+
       localStorage.setItem("page", oldDiv.innerHTML);
       prof();
       off(2);
@@ -307,12 +304,11 @@ function info() {
     input[i].setAttribute("readonly", true);
   }
 }
-function copyPhoneNumber(){
-  var pIcon=document.getElementById('phoneLink');
+function copyPhoneNumber() {
+  var pIcon = document.getElementById("phoneLink");
 
-  
-  var tel='tel:'+localStorage.getItem("addPhone")
-  pIcon.href=tel;
+  var tel = "tel:" + localStorage.getItem("addPhone");
+  pIcon.href = tel;
 }
 
 var x, i, j, l, ll, selElmnt, a, b, c;
@@ -335,7 +331,7 @@ for (i = 0; i < l; i++) {
     create a new DIV that will act as an option item:*/
     c = document.createElement("DIV");
     c.innerHTML = selElmnt.options[j].innerHTML;
-    c.addEventListener("click", function(e) {
+    c.addEventListener("click", function (e) {
       /*when an item is clicked, update the original select box,
       and the selected item:*/
       var y, i, k, s, h, sl, yl;
@@ -360,7 +356,7 @@ for (i = 0; i < l; i++) {
     b.appendChild(c);
   }
   x[i].appendChild(b);
-  a.addEventListener("click", function(e) {
+  a.addEventListener("click", function (e) {
     /*when the select box is clicked, close any other select boxes,
     and open/close the current select box:*/
     e.stopPropagation();
@@ -373,14 +369,19 @@ for (i = 0; i < l; i++) {
 function closeAllSelect(elmnt) {
   /*a function that will close all select boxes in the document,
   except the current select box:*/
-  var x, y, i, xl, yl, arrNo = [];
+  var x,
+    y,
+    i,
+    xl,
+    yl,
+    arrNo = [];
   x = document.getElementsByClassName("select-items");
   y = document.getElementsByClassName("select-selected");
   xl = x.length;
   yl = y.length;
   for (i = 0; i < yl; i++) {
     if (elmnt == y[i]) {
-      arrNo.push(i)
+      arrNo.push(i);
     } else {
       y[i].classList.remove("select-arrow-active");
     }
@@ -394,4 +395,3 @@ function closeAllSelect(elmnt) {
 /*if the user clicks anywhere outside the select box,
 then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
-

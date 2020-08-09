@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   height: 100%;
 }
 
@@ -21,7 +21,7 @@ body {
 #mainHeader {
   width: 100%;
   height: 150px;
-  background-image: linear-gradient(to left, #1488CC, #2B32B2);
+  background-image: linear-gradient(to left, #1488cc, #2b32b2);
   border: 1px solid #465ef6;
   position: fixed;
   top: 0px;
@@ -31,7 +31,7 @@ body {
   margin: 40px 0 0 83px;
   color: white;
   font-size: 30px;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
 }
 
 #panel {
@@ -78,7 +78,6 @@ body {
   overflow: scroll;
   padding-top: 12px;
   padding-bottom: 15px;
-  
 }
 
 .contact {
@@ -94,7 +93,6 @@ body {
   translate: background-color 1s;
   justify-content: flex-start;
   align-items: center;
-
 }
 
 .contact:active {
@@ -102,11 +100,10 @@ body {
 }
 
 .perName {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   cursor: pointer;
   font-weight: 500;
   margin-left: 15px;
-
 }
 
 .contact .pImg {
@@ -141,8 +138,7 @@ body {
   color: #465ef6;
   font-size: 20px;
   font-weight: bold;
-  font-family: 'Noto Sans', sans-serif;
-
+  font-family: "Noto Sans", sans-serif;
 }
 
 .fa-arrow-left {
@@ -164,34 +160,30 @@ body {
 
 #chatHeader h4:before {
   content: url("../pics/check-circle.svg");
- padding: 4px;
- 
+  padding: 4px;
 }
 
 #chatArea {
   width: 100%;
-  height:75%;
+  height: 75%;
   position: fixed;
   top: 85px;
   overflow: scroll;
-  
-  
 }
 
 #chatFt {
   width: 100%;
   height: 100px;
-  margin-top:10px;
+  margin-top: 10px;
   position: fixed;
   bottom: 0;
   left: 0;
-  right:0;
-  background-color:white;
+  right: 0;
+  background-color: white;
 
   display: flex;
   justify-content: space-around;
   box-shadow: -4px -8px 20px rgba(0, 0, 0, 0.1);
-  
 }
 
 #chatFt #textBox {
@@ -200,28 +192,23 @@ body {
   margin: 20px 0 0 20px;
   border: none;
   border-radius: 10px;
- 
+
   outline: none;
   font-size: 17px;
   overflow: auto;
   padding: 5px 10px;
   border-bottom: 1px solid #465ef6;
- 
- 
 }
 
 #chatFt #textBox:hover {
-  
-border: 1px solid #465ef6;
+  border: 1px solid #465ef6;
 }
-
 
 .fa-reply {
   font-size: 35px;
   color: #465ef6;
   margin-top: 37px;
   cursor: pointer;
-
 }
 
 #add {
@@ -237,7 +224,7 @@ border: 1px solid #465ef6;
 
 #sender {
   width: 60%;
-  
+
   border-radius: 10px;
   margin: 10px 10px;
   background-color: #465ef6;
@@ -245,7 +232,6 @@ border: 1px solid #465ef6;
   overflow: hidden;
   float: left;
   padding: 2px;
-  
 }
 
 #reciver {
@@ -266,7 +252,6 @@ border: 1px solid #465ef6;
   margin: 3px 5px;
   word-wrap: break-word;
   white-space: pre-line;
-
 }
 
 #friendsCont {
@@ -310,7 +295,6 @@ border: 1px solid #465ef6;
   border-radius: 15px;
   display: inline-table;
   background-color: #f0f0f0;
-
 }
 
 .timeRec p {
@@ -338,7 +322,7 @@ border: 1px solid #465ef6;
 
 #profHeader {
   height: 170px;
-  background-image: linear-gradient(to left, #1488CC, #2B32B2);
+  background-image: linear-gradient(to left, #1488cc, #2b32b2);
 }
 
 .profContainer {
@@ -359,13 +343,12 @@ border: 1px solid #465ef6;
   height: 120px;
   position: relative;
   border-radius: 20px;
-
 }
 
 .profEditPic .fa-user-circle {
   color: #465ef6;
   font-size: 90px;
-  border: 1px solid #2B32B2;
+  border: 1px solid #2b32b2;
   padding: 9px;
   position: absolute;
   left: 50%;
@@ -393,20 +376,19 @@ border: 1px solid #465ef6;
   margin-top: 2px;
   border: none;
   outline: none;
-  border-bottom: 2px solid RGBA(70, 94, 246,0.5);
+  border-bottom: 2px solid RGBA(70, 94, 246, 0.5);
   transition: width 1s;
   font-size: 20px;
   font-weight: 400;
-  font-family:  sans-serif;
+  font-family: sans-serif;
   color: #465ef6;
-  
 }
 
 .profDetails label {
   color: #465ef6;
   font-size: 20px;
-font-weight: 500;
-  font-family: 'Noto Sans', sans-serif;
+  font-weight: 500;
+  font-family: "Noto Sans", sans-serif;
 }
 
 .profDetails #profForm input:hover,
@@ -414,7 +396,7 @@ font-weight: 500;
 #user input:hover {
   width: 100%;
   border: 2px solid #465ef6;
-  border-radius:8px;
+  border-radius: 8px;
 }
 
 #closeProf,
@@ -429,7 +411,7 @@ font-weight: 500;
   margin-left: 50%;
   transform: translate(-50%);
   margin-top: 15px;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   margin-bottom: 10px;
   cursor: pointer;
 }
@@ -469,12 +451,12 @@ font-weight: 500;
 }
 
 /* On mouse-over, add a grey background color */
-.container:hover input~.checkmark {
+.container:hover input ~ .checkmark {
   background-color: #ccc;
 }
 
 /* When the checkbox is checked, add a blue background */
-.container input:checked~.checkmark {
+.container input:checked ~ .checkmark {
   background-color: #465ef6;
 }
 
@@ -486,7 +468,7 @@ font-weight: 500;
 }
 
 /* Show the checkmark when checked */
-.container input:checked~.checkmark:after {
+.container input:checked ~ .checkmark:after {
   display: block;
 }
 
@@ -579,72 +561,78 @@ font-weight: 500;
 #close {
   display: none;
 }
-.tabcontent{
-animation:fadeEffect 1s;/* Fading effect takes 1 second */
+.tabcontent {
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
 }
 
 /* Go from zero to full opacity */
-@keyframes fadeEffect{
-from{opacity:0;}
- to{opacity:1;}
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /*the container must be positioned relative:*/
 .custom-select {
-position: relative;
+  position: relative;
 }
 
 .custom-select select {
-display: none; /*hide original SELECT element:*/
+  display: none; /*hide original SELECT element:*/
 }
 
 .select-selected {
-background-color: #465ef6;
+  background-color: #465ef6;
 }
 
 /*style the arrow inside the select element:*/
 .select-selected:after {
-position: absolute;
-content: "";
-top: 14px;
-right: 10px;
-width: 0;
-height: 0;
-border: 6px solid transparent;
-border-color: #fff transparent transparent transparent;
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
 }
 
 /*point the arrow upwards when the select box is open (active):*/
 .select-selected.select-arrow-active:after {
-border-color: transparent transparent #fff transparent;
-top: 7px;
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
 }
 
 /*style the items (options), including the selected item:*/
-.select-items div,.select-selected {
-color: #ffffff;
-padding: 8px 16px;
-border: 1px solid transparent;
-border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-cursor: pointer;
-user-select: none;
+.select-items div,
+.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
 }
 
 /*style items (options):*/
 .select-items {
-position: absolute;
-background-color: #465ef6;
-top: 100%;
-left: 0;
-right: 0;
-z-index: 99;
+  position: absolute;
+  background-color: #465ef6;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
 }
 
 /*hide the items when the select box is closed:*/
 .select-hide {
-display: none;
+  display: none;
 }
 
-.select-items div:hover, .same-as-selected {
-background-color: rgba(0, 0, 0, 0.1);
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
 }

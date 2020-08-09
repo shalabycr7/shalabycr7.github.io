@@ -87,11 +87,19 @@
           <h3 class="perName" name="Ali" dataindex="1">Ali</h3>
         </div>
       </div>
-      <div id="friends" class="w3-container tap tabcontent" style="display: none;">
+      <div
+        id="friends"
+        class="w3-container tap tabcontent"
+        style="display: none;"
+      >
         <h2>Paris</h2>
         <p>Paris is the capital of France.</p>
       </div>
-      <div id="calls" class="w3-container tap tabcontent" style="display: none;">
+      <div
+        id="calls"
+        class="w3-container tap tabcontent"
+        style="display: none;"
+      >
         <h2>Tokyo</h2>
         <p>Tokyo is the capital of Japan.</p>
       </div>
@@ -106,7 +114,13 @@
               id="chatButton"
               onclick="clickChat1()"
             ></i>
-          <a href="" id="phoneLink">  <i class="fas fa-phone-alt" id="phoneIcon" onclick="copyPhoneNumber()"></i></a>
+            <a href="" id="phoneLink">
+              <i
+                class="fas fa-phone-alt"
+                id="phoneIcon"
+                onclick="copyPhoneNumber()"
+              ></i
+            ></a>
             <i class="fas fa-video"></i>
             <i class="fas fa-info-circle" id="info" onclick="info()"></i>
           </div>
@@ -134,16 +148,15 @@
               <br />
               <input type="number" name="userPhone" id="userPhone" />
               <br />
-            <!-- Surround the select box within a "custom-select" DIV element.
+              <!-- Surround the select box within a "custom-select" DIV element.
             Remember to set the width: -->
-            <div class="custom-select" id="vv"  style="width:150px;">
-              <select>
-                <option value="0">Select category:</option>
-                <option value="1">All</option>
-                 <option value="2">Friends</option>
-                
+              <div class="custom-select" id="vv" style="width: 150px;">
+                <select>
+                  <option value="0">Select category:</option>
+                  <option value="1">All</option>
+                  <option value="2">Friends</option>
                 </select>
-            </div>
+              </div>
             </form>
             <button id="addUser">Add</button>
           </div>
