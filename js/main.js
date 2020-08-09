@@ -13,29 +13,22 @@ function indexLoad() {
   } else {
     a.innerHTML = page;
   }
+  
+  var vb = document.getElementById('friends');
+  
+  if (pagefr == null) {
+  
+  } else {
+    vb.innerHTML = pagefr;
+    prof();
+    profPageLoad();
+  
+  }
   openTap("all", "0");
   prof();
   n();
   profPageLoad();
   document.getElementsByClassName("overlay")[0].style.backgroundColor = "white";
-}
-
-function n() {
-  var k = document.getElementsByClassName("contact");
-  var kl = document.getElementsByClassName("perName");
-  for (var i = 0; i < k.length; i++) {
-    kl[i].addEventListener("click", clickChat1);
-    k[i].setAttribute("outName", kl[i].innerHTML);
-
-    k[i].addEventListener("click", function () {
-      var otName = this.getAttribute("outName");
-      var emailInfo = this.getAttribute("email");
-      var phoneInfo = this.getAttribute("phone");
-      localStorage.setItem("addPhone", phoneInfo);
-      localStorage.setItem("addName", otName);
-      localStorage.setItem("addEmail", emailInfo);
-    });
-  }
 }
 
 function clickChat1() {
@@ -75,12 +68,16 @@ function add() {
     var name = user["userName"].value;
     var Eml = user["userEmail"].value;
     var Phone = user["userPhone"].value;
-    var cj = document.getElementById("vv");
+    
+    var selectedOption = document.getElementsByClassName('same-as-selected')[0];
 
-    if (name == "" || Eml == "" || Phone == "") {
+    if (name == "" || Eml == "" || Phone == ""||selectedOption==undefined) {
       alert("Please complete the information");
     } else {
-      var oldDiv = document.getElementById("all");
+     // alert(selectedOption.innerHTML);
+      if(selectedOption.innerHTML=='All'){
+        //alert('al');
+        var oldDiv = document.getElementById("all");
 
       var newName = document.createElement("h3");
       newName.className = "perName";
@@ -107,7 +104,41 @@ function add() {
       n();
       user.reset();
       addUser.removeEventListener("click", addContacts);
-    }
+  
+      }
+      else{
+        //alert('fr');
+        var oldDiv = document.getElementById("friends");
+
+      var newName = document.createElement("h3");
+      newName.className = "perName";
+      var newDiv = document.createElement("div");
+      var sec = document.getElementById("newAddFriend");
+      var newPPic = document.createElement("img");
+      newPPic.className = "pImg";
+      newPPic.src = "pics/user-circle.svg";
+      newDiv.appendChild(newPPic);
+      newDiv.className = "contact";
+      newName.innerHTML = name;
+      newDiv.appendChild(newName);
+      sec.appendChild(newDiv);
+      oldDiv.appendChild(sec);
+
+      newDiv.setAttribute("email", Eml);
+
+      newDiv.setAttribute("phone", Phone);
+      //newDiv.scrollIntoView();
+
+      localStorage.setItem("pageFriend", oldDiv.innerHTML);
+      prof();
+      off(2);
+      n();
+      user.reset();
+      location.reload();
+      addUser.removeEventListener("click", addContacts);
+ 
+      }
+        }
   }
 }
 
@@ -196,6 +227,7 @@ function off(i) {
 
 var ss = localStorage.getItem("y");
 var page = localStorage.getItem("page");
+var pagefr = localStorage.getItem("pageFriend");
 
 function getTime(classN) {
   var date = new Date();
@@ -259,6 +291,7 @@ var kk = localStorage.getItem("check");
 
 function openTap(tapName, n) {
   var i;
+ 
   var x = document.getElementsByClassName("tap");
   var k = document.getElementsByClassName("tapBu")[n];
   k.style.borderBottom = "4px solid #465ef6";
@@ -268,6 +301,16 @@ function openTap(tapName, n) {
   } else if (n == 1) {
     document.getElementsByClassName("tapBu")[0].style.borderBottom = "none";
     document.getElementsByClassName("tapBu")[2].style.borderBottom = "none";
+    var vb=document.getElementById('friends');
+    
+    if (pagefr==null) {
+      
+    } else {
+      vb.innerHTML=pagefr;
+      prof();
+      profPageLoad();
+      
+    }
   } else {
     document.getElementsByClassName("tapBu")[1].style.borderBottom = "none";
     document.getElementsByClassName("tapBu")[0].style.borderBottom = "none";
@@ -277,6 +320,26 @@ function openTap(tapName, n) {
   }
   document.getElementById(tapName).style.display = "block";
 }
+
+
+function n() {
+  var k = document.getElementsByClassName("contact");
+  var kl = document.getElementsByClassName("perName");
+  for (var i = 0; i < k.length; i++) {
+    kl[i].addEventListener("click", clickChat1);
+    k[i].setAttribute("outName", kl[i].innerHTML);
+
+    k[i].addEventListener("click", function () {
+      var otName = this.getAttribute("outName");
+      var emailInfo = this.getAttribute("email");
+      var phoneInfo = this.getAttribute("phone");
+      localStorage.setItem("addPhone", phoneInfo);
+      localStorage.setItem("addName", otName);
+      localStorage.setItem("addEmail", emailInfo);
+    });
+  }
+}
+
 
 function cc() {
   on(0);
