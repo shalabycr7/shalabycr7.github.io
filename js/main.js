@@ -1,7 +1,7 @@
 function prof() {
   var k = document.getElementsByClassName("pImg");
   for (var i = 0; i < k.length; i++) {
-    k[i].addEventListener("click", function () {
+    k[i].addEventListener("click", function() {
       document.getElementsByClassName("overlay")[1].style.display = "block";
     });
   }
@@ -9,20 +9,17 @@ function prof() {
 
 function indexLoad() {
   var a = document.getElementById("all");
+  var fr = document.getElementById("friends");
   if (page == null) {
+
   } else {
     a.innerHTML = page;
   }
-  
-  var vb = document.getElementById('friends');
-  
-  if (pagefr == null) {
-  
+
+  if (pageFr == null) {
+
   } else {
-    vb.innerHTML = pagefr;
-    prof();
-    profPageLoad();
-  
+    fr.innerHTML = page;
   }
   openTap("all", "0");
   prof();
@@ -48,8 +45,7 @@ function sendText() {
 function bot() {
   var se = document.getElementsByClassName("recP");
   var recLast = se[se.length - 1];
-  if (recLast == null) {
-  } else {
+  if (recLast == null) {} else {
     if (recLast.innerHTML.includes("hi")) {
       creat_sender("nice to meet you");
       creat_sender("nice ou");
@@ -59,87 +55,74 @@ function bot() {
 }
 
 function add() {
-  on(2);
-  var addUser = document.getElementById("addUser");
-  addUser.addEventListener("click", addContacts);
 
-  function addContacts() {
+  on(2);
+
+  var addUser = document.getElementById("addUser");
+  addUser.addEventListener("click", function() {
     var user = document.getElementById("userForm");
     var name = user["userName"].value;
     var Eml = user["userEmail"].value;
     var Phone = user["userPhone"].value;
-    
-    var selectedOption = document.getElementsByClassName('same-as-selected')[0];
 
-    if (name == "" || Eml == "" || Phone == ""||selectedOption==undefined) {
+    var selectedOp = document.getElementsByClassName('same-as-selected')[0];
+    if (name == "" || Eml == "" || Phone == "" || selectedOp == undefined) {
       alert("Please complete the information");
     } else {
-     // alert(selectedOption.innerHTML);
-      if(selectedOption.innerHTML=='All'){
-        //alert('al');
-        var oldDiv = document.getElementById("all");
 
-      var newName = document.createElement("h3");
-      newName.className = "perName";
-      var newDiv = document.createElement("div");
-      var sec = document.getElementById("newAdd");
-      var newPPic = document.createElement("img");
-      newPPic.className = "pImg";
-      newPPic.src = "pics/user-circle.svg";
-      newDiv.appendChild(newPPic);
-      newDiv.className = "contact";
-      newName.innerHTML = name;
-      newDiv.appendChild(newName);
-      sec.appendChild(newDiv);
-      oldDiv.appendChild(sec);
+      this.removeEventListener('click', arguments.callee);
 
-      newDiv.setAttribute("email", Eml);
-
-      newDiv.setAttribute("phone", Phone);
-      //newDiv.scrollIntoView();
-
-      localStorage.setItem("page", oldDiv.innerHTML);
-      prof();
-      off(2);
-      n();
-      user.reset();
-      addUser.removeEventListener("click", addContacts);
-  
+      if (selectedOp.innerText == 'All') {
+        addContacts('all', 'newAdd');
+      } else {
+        addContacts('friends', 'newAddFriend');
       }
-      else{
-        //alert('fr');
-        var oldDiv = document.getElementById("friends");
+      
+    }
 
-      var newName = document.createElement("h3");
-      newName.className = "perName";
-      var newDiv = document.createElement("div");
-      var sec = document.getElementById("newAddFriend");
-      var newPPic = document.createElement("img");
-      newPPic.className = "pImg";
-      newPPic.src = "pics/user-circle.svg";
-      newDiv.appendChild(newPPic);
-      newDiv.className = "contact";
-      newName.innerHTML = name;
-      newDiv.appendChild(newName);
-      sec.appendChild(newDiv);
-      oldDiv.appendChild(sec);
+  });
+}
 
-      newDiv.setAttribute("email", Eml);
+function addContacts(tapID, secID) {
+  var user = document.getElementById("userForm");
+  var name = user["userName"].value;
+  var Eml = user["userEmail"].value;
+  var Phone = user["userPhone"].value;
 
-      newDiv.setAttribute("phone", Phone);
-      //newDiv.scrollIntoView();
+  var selectedOp = document.getElementsByClassName('same-as-selected')[0];
 
-      localStorage.setItem("pageFriend", oldDiv.innerHTML);
-      prof();
-      off(2);
-      n();
-      user.reset();
-      location.reload();
-      addUser.removeEventListener("click", addContacts);
- 
-      }
-        }
+  var oldDiv = document.getElementById(tapID);
+
+  var newName = document.createElement("h3");
+  newName.className = "perName";
+  var newDiv = document.createElement("div");
+  var sec = document.getElementById(secID);
+  var newPPic = document.createElement("img");
+  newPPic.className = "pImg";
+  newPPic.src = "pics/user-circle.svg";
+  newDiv.appendChild(newPPic);
+  newDiv.className = "contact";
+  newName.innerHTML = name;
+  newDiv.appendChild(newName);
+  sec.appendChild(newDiv);
+  oldDiv.appendChild(sec);
+
+  newDiv.setAttribute("email", Eml);
+
+  newDiv.setAttribute("phone", Phone);
+  //newDiv.scrollIntoView();
+  if (tapID == 'all') {
+    localStorage.setItem("page", oldDiv.innerHTML);
   }
+  else {
+    localStorage.setItem("pageFriend", oldDiv.innerHTML);
+  }
+  location.reload();
+  prof();
+  off(2);
+  n();
+  user.reset();
+
 }
 
 function chatPageLoad() {
@@ -199,7 +182,7 @@ function creat_reciver(text) {
   textArea.appendChild(newTimeDiv);
   textB.value = "";
   getTime("tm");
-  newRec.addEventListener("mousemove", function () {
+  newRec.addEventListener("mousemove", function() {
     alert("gg");
   });
   var c = document.getElementsByClassName("recP");
@@ -211,8 +194,7 @@ function creat_reciver(text) {
   } else {
     newRec.style.height = eval("ln/33*20") + "px";
   }*/
-  if (recLast == null) {
-  } else {
+  if (recLast == null) {} else {
     recLast.scrollIntoView();
   }
 }
@@ -227,7 +209,7 @@ function off(i) {
 
 var ss = localStorage.getItem("y");
 var page = localStorage.getItem("page");
-var pagefr = localStorage.getItem("pageFriend");
+var pageFr = localStorage.getItem("pageFriend");
 
 function getTime(classN) {
   var date = new Date();
@@ -258,7 +240,7 @@ function profPageLoad() {
   var f = document.getElementById("profForm");
   var j = document.getElementById("ch");
 
-  profCloseBu.addEventListener("click", function () {
+  profCloseBu.addEventListener("click", function() {
     var name = f["profName"].value;
     var email = f["profEmail"].value;
     var phone = f["profPhone"].value;
@@ -274,7 +256,7 @@ function profPageLoad() {
   f[0].value = pName;
   f[1].value = pEmail;
   f[2].value = pPhone;
-  j.addEventListener("change", function () {
+  j.addEventListener("change", function() {
     var k = j.checked.toString();
     localStorage.setItem("check", k);
   });
@@ -291,7 +273,7 @@ var kk = localStorage.getItem("check");
 
 function openTap(tapName, n) {
   var i;
- 
+
   var x = document.getElementsByClassName("tap");
   var k = document.getElementsByClassName("tapBu")[n];
   k.style.borderBottom = "4px solid #465ef6";
@@ -301,16 +283,14 @@ function openTap(tapName, n) {
   } else if (n == 1) {
     document.getElementsByClassName("tapBu")[0].style.borderBottom = "none";
     document.getElementsByClassName("tapBu")[2].style.borderBottom = "none";
-    var vb=document.getElementById('friends');
-    
-    if (pagefr==null) {
-      
+    var vb = document.getElementById('friends');
+    if (pageFr == null) {
+
     } else {
-      vb.innerHTML=pagefr;
-      prof();
-      profPageLoad();
-      
+      vb.innerHTML = pageFr;
+
     }
+
   } else {
     document.getElementsByClassName("tapBu")[1].style.borderBottom = "none";
     document.getElementsByClassName("tapBu")[0].style.borderBottom = "none";
@@ -329,7 +309,7 @@ function n() {
     kl[i].addEventListener("click", clickChat1);
     k[i].setAttribute("outName", kl[i].innerHTML);
 
-    k[i].addEventListener("click", function () {
+    k[i].addEventListener("click", function() {
       var otName = this.getAttribute("outName");
       var emailInfo = this.getAttribute("email");
       var phoneInfo = this.getAttribute("phone");
@@ -367,6 +347,7 @@ function info() {
     input[i].setAttribute("readonly", true);
   }
 }
+
 function copyPhoneNumber() {
   var pIcon = document.getElementById("phoneLink");
 
@@ -394,7 +375,7 @@ for (i = 0; i < l; i++) {
     create a new DIV that will act as an option item:*/
     c = document.createElement("DIV");
     c.innerHTML = selElmnt.options[j].innerHTML;
-    c.addEventListener("click", function (e) {
+    c.addEventListener("click", function(e) {
       /*when an item is clicked, update the original select box,
       and the selected item:*/
       var y, i, k, s, h, sl, yl;
@@ -419,7 +400,7 @@ for (i = 0; i < l; i++) {
     b.appendChild(c);
   }
   x[i].appendChild(b);
-  a.addEventListener("click", function (e) {
+  a.addEventListener("click", function(e) {
     /*when the select box is clicked, close any other select boxes,
     and open/close the current select box:*/
     e.stopPropagation();
