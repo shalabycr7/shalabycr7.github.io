@@ -195,7 +195,7 @@ body {
 
   outline: none;
   font-size: 17px;
-  overflow: auto;
+  resize: none;
   padding: 5px 10px;
   border-bottom: 1px solid #465ef6;
 }
