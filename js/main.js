@@ -1,7 +1,7 @@
 function prof() {
   var k = document.getElementsByClassName("pImg");
   for (var i = 0; i < k.length; i++) {
-    k[i].addEventListener("click", function() {
+    k[i].addEventListener("click", function () {
       document.getElementsByClassName("overlay")[1].style.display = "block";
     });
   }
@@ -11,13 +11,11 @@ function indexLoad() {
   var a = document.getElementById("all");
   var fr = document.getElementById("friends");
   if (page == null) {
-
   } else {
     a.innerHTML = page;
   }
 
   if (pageFr == null) {
-
   } else {
     fr.innerHTML = page;
   }
@@ -45,7 +43,8 @@ function sendText() {
 function bot() {
   var se = document.getElementsByClassName("recP");
   var recLast = se[se.length - 1];
-  if (recLast == null) {} else {
+  if (recLast == null) {
+  } else {
     if (recLast.innerHTML.includes("hi")) {
       creat_sender("nice to meet you");
       creat_sender("nice ou");
@@ -55,31 +54,27 @@ function bot() {
 }
 
 function add() {
-
   on(2);
 
   var addUser = document.getElementById("addUser");
-  addUser.addEventListener("click", function() {
+  addUser.addEventListener("click", function () {
     var user = document.getElementById("userForm");
     var name = user["userName"].value;
     var Eml = user["userEmail"].value;
     var Phone = user["userPhone"].value;
 
-    var selectedOp = document.getElementsByClassName('same-as-selected')[0];
+    var selectedOp = document.getElementsByClassName("same-as-selected")[0];
     if (name == "" || Eml == "" || Phone == "" || selectedOp == undefined) {
       alert("Please complete the information");
     } else {
+      this.removeEventListener("click", arguments.callee);
 
-      this.removeEventListener('click', arguments.callee);
-
-      if (selectedOp.innerText == 'All') {
-        addContacts('all', 'newAdd');
+      if (selectedOp.innerText == "All") {
+        addContacts("all", "newAdd");
       } else {
-        addContacts('friends', 'newAddFriend');
+        addContacts("friends", "newAddFriend");
       }
-      
     }
-
   });
 }
 
@@ -89,7 +84,7 @@ function addContacts(tapID, secID) {
   var Eml = user["userEmail"].value;
   var Phone = user["userPhone"].value;
 
-  var selectedOp = document.getElementsByClassName('same-as-selected')[0];
+  var selectedOp = document.getElementsByClassName("same-as-selected")[0];
 
   var oldDiv = document.getElementById(tapID);
 
@@ -111,10 +106,9 @@ function addContacts(tapID, secID) {
 
   newDiv.setAttribute("phone", Phone);
   //newDiv.scrollIntoView();
-  if (tapID == 'all') {
+  if (tapID == "all") {
     localStorage.setItem("page", oldDiv.innerHTML);
-  }
-  else {
+  } else {
     localStorage.setItem("pageFriend", oldDiv.innerHTML);
   }
   location.reload();
@@ -122,7 +116,6 @@ function addContacts(tapID, secID) {
   off(2);
   n();
   user.reset();
-
 }
 
 function chatPageLoad() {
@@ -182,7 +175,7 @@ function creat_reciver(text) {
   textArea.appendChild(newTimeDiv);
   textB.value = "";
   getTime("tm");
-  newRec.addEventListener("mousemove", function() {
+  newRec.addEventListener("mousemove", function () {
     alert("gg");
   });
   var c = document.getElementsByClassName("recP");
@@ -194,7 +187,8 @@ function creat_reciver(text) {
   } else {
     newRec.style.height = eval("ln/33*20") + "px";
   }*/
-  if (recLast == null) {} else {
+  if (recLast == null) {
+  } else {
     recLast.scrollIntoView();
   }
 }
@@ -240,7 +234,7 @@ function profPageLoad() {
   var f = document.getElementById("profForm");
   var j = document.getElementById("ch");
 
-  profCloseBu.addEventListener("click", function() {
+  profCloseBu.addEventListener("click", function () {
     var name = f["profName"].value;
     var email = f["profEmail"].value;
     var phone = f["profPhone"].value;
@@ -256,7 +250,7 @@ function profPageLoad() {
   f[0].value = pName;
   f[1].value = pEmail;
   f[2].value = pPhone;
-  j.addEventListener("change", function() {
+  j.addEventListener("change", function () {
     var k = j.checked.toString();
     localStorage.setItem("check", k);
   });
@@ -283,14 +277,11 @@ function openTap(tapName, n) {
   } else if (n == 1) {
     document.getElementsByClassName("tapBu")[0].style.borderBottom = "none";
     document.getElementsByClassName("tapBu")[2].style.borderBottom = "none";
-    var vb = document.getElementById('friends');
+    var vb = document.getElementById("friends");
     if (pageFr == null) {
-
     } else {
       vb.innerHTML = pageFr;
-
     }
-
   } else {
     document.getElementsByClassName("tapBu")[1].style.borderBottom = "none";
     document.getElementsByClassName("tapBu")[0].style.borderBottom = "none";
@@ -301,7 +292,6 @@ function openTap(tapName, n) {
   document.getElementById(tapName).style.display = "block";
 }
 
-
 function n() {
   var k = document.getElementsByClassName("contact");
   var kl = document.getElementsByClassName("perName");
@@ -309,7 +299,7 @@ function n() {
     kl[i].addEventListener("click", clickChat1);
     k[i].setAttribute("outName", kl[i].innerHTML);
 
-    k[i].addEventListener("click", function() {
+    k[i].addEventListener("click", function () {
       var otName = this.getAttribute("outName");
       var emailInfo = this.getAttribute("email");
       var phoneInfo = this.getAttribute("phone");
@@ -319,7 +309,6 @@ function n() {
     });
   }
 }
-
 
 function cc() {
   on(0);
@@ -353,9 +342,13 @@ function copyPhoneNumber() {
 
   var tel = "tel:" + localStorage.getItem("addPhone");
   pIcon.href = tel;
-  
-  function copy() { var copyText = document.getElementById("userP"); copyText.select(); document.execCommand("copy"); } document.querySelector("#phoneLink").addEventListener("click", copy);
-  
+
+  function copy() {
+    var copyText = document.getElementById("userP");
+    copyText.select();
+    document.execCommand("copy");
+  }
+  document.querySelector("#phoneLink").addEventListener("click", copy);
 }
 
 var x, i, j, l, ll, selElmnt, a, b, c;
@@ -378,7 +371,7 @@ for (i = 0; i < l; i++) {
     create a new DIV that will act as an option item:*/
     c = document.createElement("DIV");
     c.innerHTML = selElmnt.options[j].innerHTML;
-    c.addEventListener("click", function(e) {
+    c.addEventListener("click", function (e) {
       /*when an item is clicked, update the original select box,
       and the selected item:*/
       var y, i, k, s, h, sl, yl;
@@ -403,7 +396,7 @@ for (i = 0; i < l; i++) {
     b.appendChild(c);
   }
   x[i].appendChild(b);
-  a.addEventListener("click", function(e) {
+  a.addEventListener("click", function (e) {
     /*when the select box is clicked, close any other select boxes,
     and open/close the current select box:*/
     e.stopPropagation();
