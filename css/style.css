@@ -168,7 +168,7 @@ body {
   height: 75%;
   position: fixed;
   top: 85px;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 #chatFt {
@@ -205,9 +205,9 @@ body {
 }
 
 .fa-reply {
-  font-size: 35px;
+  font-size: 25px;
   color: #465ef6;
-  margin-top: 37px;
+  margin: 39px;
   cursor: pointer;
 }
 
@@ -289,10 +289,10 @@ body {
 
 .timeRec {
   height: 22px;
-  width: 73px;
+  width: 80px;
   float: right;
   margin: 10px 10px;
-  border-radius: 15px;
+  border-radius: 7px;
   display: inline-table;
   background-color: #f0f0f0;
 }
@@ -305,10 +305,10 @@ body {
 
 .timeSent {
   height: 22px;
-  width: 73px;
+  width: 80px;
   float: left;
   margin: 10px 10px;
-  border-radius: 15px;
+  border-radius: 7px;
   background-color: #465ef6;
   display: inline-table;
 }
