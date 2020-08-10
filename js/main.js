@@ -201,7 +201,7 @@ function off(i) {
   document.getElementsByClassName("overlay")[i].style.display = "none";
 }
 
-var ss = localStorage.getItem("y");
+
 var page = localStorage.getItem("page");
 var pageFr = localStorage.getItem("pageFriend");
 
